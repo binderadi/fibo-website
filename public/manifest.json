@@ -1,0 +1,23 @@
+{
+  "name": "FIBO News",
+  "short_name": "FIBO News",
+  "description": "FIBO News — real-time Middle East coverage",
+  "start_url": "./#/test/news",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#0A0E1A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./news-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./news-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

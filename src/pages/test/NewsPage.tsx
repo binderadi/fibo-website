@@ -379,6 +379,13 @@ export default function NewsPage() {
   const [showFibo, setShowFibo] = useState(false)
   const [heroIndex, setHeroIndex] = useState(0)
   const [heroHovered, setHeroHovered] = useState(false)
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 430)
+
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth <= 430)
+    window.addEventListener('resize', handler)
+    return () => window.removeEventListener('resize', handler)
+  }, [])
 
   useEffect(() => {
     if (heroHovered) return
@@ -387,29 +394,31 @@ export default function NewsPage() {
   }, [heroHovered])
 
   const hero = heroSlides[heroIndex]
+  /* Shared content-area style — 88px padding on desktop, 16px on mobile */
+  const ca: React.CSSProperties = { ...s.contentArea, ...(isMobile && { padding: '0 16px' }) }
 
   return (
-    <div style={{ background: C.bg, minHeight: '100vh' }}>
+    <div style={{ background: C.bg, minHeight: '100vh', overflowX: 'hidden' }}>
 
       {/* ── HEADER ───────────────────────────────────────────────── */}
       {/* Top bar — 40px (Inside-Out: 13px/24lh + 8px v-pad × 2) */}
       <div style={s.topBar}>
-        <div style={s.topBarInner}>
+        <div style={{ ...s.topBarInner, ...(isMobile && { padding: '0 16px' }) }}>
           <div style={s.topBarLeft}>
             <Link to="/" style={s.backLink}>← FIBO</Link>
-            <span style={s.topBarSep} />
-            <span style={s.topBarDate}>Sunday, April 6, 2026</span>
+            {!isMobile && <span style={s.topBarSep} />}
+            {!isMobile && <span style={s.topBarDate}>Sunday, April 6, 2026</span>}
           </div>
-          <span style={s.siteName}>FIBO News</span>
+          <span style={{ ...s.siteName, ...(isMobile && { position: 'static', transform: 'none', flex: 1, textAlign: 'center' }) }}>FIBO News</span>
           <div style={s.topBarRight}>
-<span style={s.searchIcon}>⌕</span>
+            <span style={s.searchIcon}>⌕</span>
           </div>
         </div>
       </div>
 
       {/* Categories nav — 48px (Inside-Out: 13px/24lh + 12px v-pad × 2) */}
       <nav style={s.catNav}>
-        <div style={s.catNavInner}>
+        <div style={{ ...s.catNavInner, ...(isMobile && { padding: '0 16px', overflowX: 'auto', scrollbarWidth: 'none' }) }}>
           {['World', 'Politics', 'Business', 'Technology', 'Science', 'Health', 'Entertainment'].map(cat => (
             <a key={cat} href="#" style={s.catLink} onClick={e => e.preventDefault()}>{cat}</a>
           ))}
@@ -430,8 +439,8 @@ export default function NewsPage() {
       {/* ── HERO ─────────────────────────────────────────────────── */}
       {/* Width: 1294px (full content area). Height: 1294×42% = 543px */}
       <section style={s.heroSection} onMouseEnter={() => setHeroHovered(true)} onMouseLeave={() => setHeroHovered(false)}>
-        <div style={s.heroWrap}>
-          <div style={s.heroImg}>
+        <div style={{ ...s.heroWrap, ...(isMobile && { padding: '0' }) }}>
+          <div style={{ ...s.heroImg, ...(isMobile && { height: 'auto', aspectRatio: '16/9', borderRadius: 0 }) }}>
             <img
               key={heroIndex}
               src={hero.image}
@@ -440,21 +449,21 @@ export default function NewsPage() {
               referrerPolicy="no-referrer"
             />
             <div style={s.heroGradient} />
-            <div style={s.heroText}>
+            <div style={{ ...s.heroText, ...(isMobile && { padding: '16px' }) }}>
               {/* Category tag — 32px height (10px/16lh + 8px v-pad × 2) */}
               <span style={{ ...s.catTag, background: CAT_COLORS[hero.category] }}>
                 {hero.category}
               </span>
-              {/* Hero headline — 34px / 40px lh */}
-              <h1 key={`headline-${heroIndex}`} style={{ ...s.heroHeadline, animation: 'heroFade 0.6s ease' }}>{hero.headline}</h1>
-              {/* Hero excerpt — 16px / 24px lh */}
-              <p style={s.heroExcerpt}>{hero.excerpt}</p>
+              {/* Hero headline — 34px / 40px lh desktop; 21px / 32px lh mobile */}
+              <h1 key={`headline-${heroIndex}`} style={{ ...s.heroHeadline, animation: 'heroFade 0.6s ease', ...(isMobile && { fontSize: '21px', lineHeight: '32px', maxWidth: '100%' }) }}>{hero.headline}</h1>
+              {/* Hero excerpt — hidden on mobile */}
+              {!isMobile && <p style={s.heroExcerpt}>{hero.excerpt}</p>}
               {/* Byline — 11px / 16px lh */}
               <div style={s.heroByline}>
                 <span>By {hero.author}</span>
                 <span style={s.heroDivider}>·</span>
-                <span>{hero.role}</span>
-                <span style={s.heroDivider}>·</span>
+                {!isMobile && <span>{hero.role}</span>}
+                {!isMobile && <span style={s.heroDivider}>·</span>}
                 <span>{hero.timestamp}</span>
               </div>
               {/* Slide dots */}
@@ -476,8 +485,8 @@ export default function NewsPage() {
       {/* ── SECONDARY STORIES ────────────────────────────────────── */}
       {/* 3 equal cards: (1294−48)÷3 = 415px each. Image: 415×42% = 174px */}
       <section style={s.secondarySection}>
-        <div style={s.contentArea}>
-          <div style={s.secondaryGrid}>
+        <div style={ca}>
+          <div style={{ ...s.secondaryGrid, ...(isMobile && { gridTemplateColumns: '1fr' }) }}>
             {secondaryStories.map((story, i) => (
               <article key={i} style={s.secondaryCard}>
                 {/* Image — 415×174px (42% ratio) */}
@@ -508,11 +517,11 @@ export default function NewsPage() {
 
       {/* ── CONTENT GRID (main 847px + sidebar 399px) ───────────── */}
       <section style={s.gridSection}>
-        <div style={s.contentArea}>
-          <div style={s.contentGrid}>
+        <div style={ca}>
+          <div style={{ ...s.contentGrid, ...(isMobile && { gridTemplateColumns: '1fr' }) }}>
 
             {/* MAIN COLUMN — 847px */}
-            <div style={s.mainCol}>
+            <div style={{ ...s.mainCol, ...(isMobile && { gridColumn: '1 / 2' }) }}>
               {/* Section header — 11px / 16px lh, uppercase */}
               <div style={s.sectionHeader}>
                 <span style={s.sectionLabel}>Latest News</span>
@@ -522,14 +531,14 @@ export default function NewsPage() {
               {/* Article list — thumbnail 220×92px (F4 of 847 = 220, 42% height) */}
               <div style={s.articleList}>
                 {articles.map((article) => (
-                  <article key={article.id} style={s.articleCard}>
+                  <article key={article.id} style={{ ...s.articleCard, ...(isMobile && { gridTemplateColumns: '1fr' }) }}>
                     <img
                       src={article.image}
                       alt={article.headline}
-                      style={s.articleThumb}
+                      style={{ ...s.articleThumb, ...(isMobile && { width: '100%', height: 'auto', aspectRatio: '16/9', borderRadius: '8px 8px 0 0' }) }}
                       referrerPolicy="no-referrer"
                     />
-                    <div style={s.articleBody}>
+                    <div style={{ ...s.articleBody, ...(isMobile && { paddingRight: 0 }) }}>
                       <span style={{ ...s.catTagSmall, color: CAT_COLORS[article.category], borderColor: CAT_COLORS[article.category] }}>
                         {article.category}
                       </span>
@@ -546,7 +555,7 @@ export default function NewsPage() {
             </div>
 
             {/* SIDEBAR — 399px */}
-            <aside style={s.sidebar}>
+            <aside style={{ ...s.sidebar, ...(isMobile && { borderLeft: 'none', paddingLeft: 0, borderTop: `1px solid ${C.border}`, paddingTop: '48px' }) }}>
 
               {/* Trending Now */}
               <div style={s.sideWidget}>
@@ -594,14 +603,14 @@ export default function NewsPage() {
 
       {/* ── SHORT VIDEOS ─────────────────────────────────────────── */}
       <section style={s.shortVideoSection}>
-        <div style={s.contentArea}>
+        <div style={ca}>
           <div style={s.sectionHeader}>
             <span style={s.sectionLabel}>Short Videos</span>
             <div style={s.sectionLine} />
           </div>
           <div style={s.shortVideoScroll}>
             {shortVideos.map((v, i) => (
-              <div key={i} style={s.shortVideoCard}>
+              <div key={i} style={{ ...s.shortVideoCard, ...(isMobile && { width: 'calc((100% - 24px) / 2)' }) }}>
                 <div style={s.shortVideoThumbWrap}>
                   <img src={v.image} alt={v.title} style={s.shortVideoThumb} referrerPolicy="no-referrer" />
                   <span style={s.shortVideoDuration}>{v.duration}</span>
@@ -618,12 +627,12 @@ export default function NewsPage() {
       {/* ── OPINION ──────────────────────────────────────────────── */}
       {/* 3 equal columns: (1294−48)÷3 = 415px each */}
       <section style={s.opinionSection}>
-        <div style={s.contentArea}>
+        <div style={ca}>
           <div style={s.sectionHeader}>
             <span style={{ ...s.sectionLabel, color: 'rgba(255,255,255,0.5)' }}>Opinion</span>
             <div style={{ ...s.sectionLine, background: 'rgba(255,255,255,0.15)' }} />
           </div>
-          <div style={s.opinionGrid}>
+          <div style={{ ...s.opinionGrid, ...(isMobile && { gridTemplateColumns: '1fr' }) }}>
             {opinions.map((op, i) => (
               <article key={i} style={s.opinionCard}>
                 {/* Author — 11px / 16px lh. Photo: 48×48px (Cesar Circles, Signal 1) */}
@@ -649,9 +658,9 @@ export default function NewsPage() {
 
       {/* ── FOOTER ───────────────────────────────────────────────── */}
       {/* 4 equal columns: (1294−72)÷4 = 305.5 → 306px each */}
-      <footer style={s.footer}>
-        <div style={s.contentArea}>
-          <div style={s.footerGrid}>
+      <footer style={{ ...s.footer, ...(isMobile && { paddingBottom: 'env(safe-area-inset-bottom, 16px)' }) }}>
+        <div style={ca}>
+          <div style={{ ...s.footerGrid, ...(isMobile && { gridTemplateColumns: 'repeat(2, 1fr)' }) }}>
             {footerSections.map((section) => (
               <div key={section.heading} style={s.footerCol}>
                 {/* Section heading — 11px / 16px lh */}
@@ -671,8 +680,8 @@ export default function NewsPage() {
 
         {/* Copyright bar — 48px (11px/16lh + 16px v-pad × 2 = 48px ✓) */}
         <div style={s.copyrightBar}>
-          <div style={s.contentArea}>
-            <div style={s.copyrightInner}>
+          <div style={ca}>
+            <div style={{ ...s.copyrightInner, ...(isMobile && { flexDirection: 'column', height: 'auto', padding: '16px 0', gap: '8px', alignItems: 'flex-start' }) }}>
               <span style={s.copyrightText}>© 2026 FIBO News Network. All rights reserved.</span>
               <div style={s.copyrightLinks}>
                 {['Privacy Policy', 'Terms of Use', 'Cookie Settings', 'Accessibility'].map(l => (
@@ -684,15 +693,16 @@ export default function NewsPage() {
         </div>
       </footer>
 
-      {/* ── FIBO TOGGLE (fixed, bottom-right) ───────────────────── */}
-      {/* Button height: 40px (13px/24lh + 8px v-pad × 2) */}
-      <button
-        onClick={() => setShowFibo(true)}
-        style={s.fiboToggle}
-        title="Show FIBO values"
-      >
-        FIBO Values
-      </button>
+      {/* ── FIBO TOGGLE (fixed, bottom-right) — hidden on mobile ── */}
+      {!isMobile && (
+        <button
+          onClick={() => setShowFibo(true)}
+          style={s.fiboToggle}
+          title="Show FIBO values"
+        >
+          FIBO Values
+        </button>
+      )}
 
       {showFibo && <FiboPanel onClose={() => setShowFibo(false)} />}
 
