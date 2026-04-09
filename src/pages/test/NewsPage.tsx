@@ -112,7 +112,7 @@ const heroSlides = [
     author: 'Itamar Eichner & Lior Ben Ari',
     role: 'Ynetnews Correspondents',
     timestamp: '2 hours ago',
-    image: '/news-images/abraham-accords.jpg',
+    image: './news-images/abraham-accords.jpg',
   },
   {
     category: 'News',
@@ -121,7 +121,7 @@ const heroSlides = [
     author: 'Elisha Ben Kimon',
     role: 'Military Correspondent, Ynetnews',
     timestamp: '3 hours ago',
-    image: '/news-images/f16.jpg',
+    image: './news-images/f16.jpg',
   },
   {
     category: 'Mideast News',
@@ -130,7 +130,7 @@ const heroSlides = [
     author: 'Lior Ben Ari',
     role: 'Middle East Correspondent, Ynetnews',
     timestamp: '1 hour ago',
-    image: '/news-images/dubai.jpg',
+    image: './news-images/dubai.jpg',
   },
   {
     category: 'Magazine',
@@ -139,7 +139,7 @@ const heroSlides = [
     author: 'Yael Feldman Shavit',
     role: 'Magazine Editor, Ynetnews',
     timestamp: '2 hours ago',
-    image: '/news-images/gavel.jpg',
+    image: './news-images/gavel.jpg',
   },
 ]
 
@@ -150,7 +150,7 @@ const secondaryStories = [
     excerpt: 'Iranian aide claims alleged violations in the ceasefire agreement; talks conditional on halting Hezbollah strikes.',
     author: 'Lior Ben Ari',
     timestamp: '3 hours ago',
-    image: '/news-images/khamenei.jpg',
+    image: './news-images/khamenei.jpg',
   },
   {
     category: 'Breaking News',
@@ -158,7 +158,7 @@ const secondaryStories = [
     excerpt: 'The Supreme Leader\'s son speaks publicly as diplomatic tension mounts over nuclear negotiations and proxy war activity across the region.',
     author: 'Lior Ben Ari',
     timestamp: '1 hour ago',
-    image: '/news-images/tyre-strike.jpg',
+    image: './news-images/tyre-strike.jpg',
   },
   {
     category: 'Breaking News',
@@ -166,7 +166,7 @@ const secondaryStories = [
     excerpt: 'Lebanese Health Ministry reports 1,888 total deaths since early March; 303 killed in the latest Israeli military operation.',
     author: 'Lior Ben Ari',
     timestamp: '1 hour ago',
-    image: '/news-images/beirut.jpg',
+    image: './news-images/beirut.jpg',
   },
 ]
 
@@ -177,7 +177,7 @@ const articles = [
     headline: 'Hezbollah fires some 60 rockets at northern Israel since morning',
     excerpt: 'Continued rocket barrages target communities across the Galilee as Home Front Command defensive policy remains active through tomorrow.',
     timestamp: '2 hours ago',
-    image: '/news-images/iron-dome.jpg',
+    image: './news-images/iron-dome.jpg',
   },
   {
     id: 2,
@@ -185,7 +185,7 @@ const articles = [
     headline: 'Launches toward Nahariya intercepted; talks came at Trump\'s request — CNN',
     excerpt: 'Netanyahu\'s direct negotiations announcement reportedly initiated at US President Trump\'s direction, according to CNN sources.',
     timestamp: '2 hours ago',
-    image: '/news-images/trump.jpg',
+    image: './news-images/trump.jpg',
   },
   {
     id: 3,
@@ -193,7 +193,7 @@ const articles = [
     headline: 'Alert in the Galilee Panhandle as missiles target Mishgav Am',
     excerpt: 'Missile and rocket fire alert activated in Moshav Mishgav Am near the Lebanon border amid intensifying cross-border exchange.',
     timestamp: '3 hours ago',
-    image: '/news-images/blue-line.jpg',
+    image: './news-images/blue-line.jpg',
   },
   {
     id: 4,
@@ -201,7 +201,7 @@ const articles = [
     headline: 'Gal Hirsch to light torch alongside Ran Gvili\'s mother at Independence Day',
     excerpt: 'Hostages coordinator and fallen soldier\'s mother selected for the Independence Day torch lighting ceremony.',
     timestamp: '3 hours ago',
-    image: '/news-images/independence-day.jpg',
+    image: './news-images/independence-day.jpg',
   },
   {
     id: 5,
@@ -209,7 +209,7 @@ const articles = [
     headline: 'Ayalon Expressway Fast Lanes project to open Sunday',
     excerpt: 'Highway 20 dedicated lane opening delayed by Iran war is now set for Sunday; features electric shuttles and 7,000-space parking.',
     timestamp: '3 hours ago',
-    image: '/news-images/ayalon.jpg',
+    image: './news-images/ayalon.jpg',
   },
 ]
 
@@ -239,27 +239,27 @@ const videos = [
   {
     title: 'Operation Eternal Darkness: What We Know So Far',
     duration: '4:12',
-    image: '/news-images/iron-dome.jpg',
+    image: './news-images/iron-dome.jpg',
   },
   {
     title: 'Inside the Israel-Lebanon Ceasefire Negotiations',
     duration: '5:48',
-    image: '/news-images/abraham-accords.jpg',
+    image: './news-images/abraham-accords.jpg',
 
   },
 ]
 
 const shortVideos = [
-  { title: 'What is Hezbollah?', duration: '1:02', views: '3.4M', image: '/news-images/tyre-strike.jpg' },
-  { title: 'The Lebanon Border Explained', duration: '0:58', views: '1.8M', image: '/news-images/blue-line.jpg' },
-  { title: 'Iran\'s Nuclear Program in 60 Seconds', duration: '1:05', views: '2.1M', image: '/news-images/khamenei.jpg' },
-  { title: 'UAE-Iran Relations: A Brief History', duration: '1:10', views: '892K', image: '/news-images/dubai.jpg' },
-  { title: 'Israel\'s Iron Dome System Explained', duration: '0:55', views: '4.2M', image: '/news-images/iron-dome.jpg' },
-  { title: 'Northern Israel: Life Under Alert', duration: '1:18', views: '1.3M', image: '/news-images/blue-line.jpg' },
-  { title: 'Hezbollah Rocket Range Map', duration: '0:48', views: '2.7M', image: '/news-images/tyre-strike.jpg' },
-  { title: 'What is Operation Eternal Darkness?', duration: '1:00', views: '5.1M', image: '/news-images/f16.jpg' },
-  { title: 'Gaza to Lebanon: Shifting IDF Focus', duration: '1:15', views: '938K', image: '/news-images/oct7-fires.jpg' },
-  { title: 'Nahariya Under Fire: 60 Seconds', duration: '1:00', views: '1.1M', image: '/news-images/iron-dome.jpg' },
+  { title: 'What is Hezbollah?', duration: '1:02', views: '3.4M', image: './news-images/tyre-strike.jpg' },
+  { title: 'The Lebanon Border Explained', duration: '0:58', views: '1.8M', image: './news-images/blue-line.jpg' },
+  { title: 'Iran\'s Nuclear Program in 60 Seconds', duration: '1:05', views: '2.1M', image: './news-images/khamenei.jpg' },
+  { title: 'UAE-Iran Relations: A Brief History', duration: '1:10', views: '892K', image: './news-images/dubai.jpg' },
+  { title: 'Israel\'s Iron Dome System Explained', duration: '0:55', views: '4.2M', image: './news-images/iron-dome.jpg' },
+  { title: 'Northern Israel: Life Under Alert', duration: '1:18', views: '1.3M', image: './news-images/blue-line.jpg' },
+  { title: 'Hezbollah Rocket Range Map', duration: '0:48', views: '2.7M', image: './news-images/tyre-strike.jpg' },
+  { title: 'What is Operation Eternal Darkness?', duration: '1:00', views: '5.1M', image: './news-images/f16.jpg' },
+  { title: 'Gaza to Lebanon: Shifting IDF Focus', duration: '1:15', views: '938K', image: './news-images/oct7-fires.jpg' },
+  { title: 'Nahariya Under Fire: 60 Seconds', duration: '1:00', views: '1.1M', image: './news-images/iron-dome.jpg' },
 ]
 
 const opinions = [
