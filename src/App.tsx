@@ -11,6 +11,7 @@ import JazzPage from './pages/test/JazzPage'
 import TrackerPage from './pages/test/TrackerPage'
 import ObservatoryPage from './pages/test/ObservatoryPage'
 import RoamPage from './pages/test/RoamPage'
+import HollowWirePage from './pages/test/HollowWirePage'
 import BacklogPage from './pages/BacklogPage'
 import SkillPage from './pages/SkillPage'
 
@@ -37,6 +38,7 @@ function AppShell() {
           <Route path="/test/tracker" element={<TrackerPage />} />
           <Route path="/test/observatory" element={<ObservatoryPage />} />
           <Route path="/test/roam" element={<RoamPage />} />
+          <Route path="/test/hollow-wire" element={<HollowWirePage />} />
           <Route path="/backlog" element={<BacklogPage />} />
           <Route path="/skill" element={<SkillPage />} />
         </Routes>

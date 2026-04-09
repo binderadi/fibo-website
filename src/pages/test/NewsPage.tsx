@@ -89,6 +89,10 @@ const C = {
 }
 
 const CAT_COLORS: Record<string, string> = {
+  'Breaking News': '#C8102E',
+  'News':          '#1565C0',
+  'Mideast News':  '#00838F',
+  'Magazine':      '#5D4037',
   World:      '#1565C0',
   Politics:   '#C8102E',
   Business:   '#2E7D32',
@@ -102,120 +106,120 @@ const CAT_COLORS: Record<string, string> = {
 
 const heroSlides = [
   {
-    category: 'World',
-    headline: 'EU and China Strike Landmark Carbon Trade Agreement in Brussels Summit',
-    excerpt: 'After three years of negotiations, European and Chinese officials have signed a historic deal linking their carbon markets. The agreement marks the first major cross-continental carbon trading framework and could reshape climate policy worldwide.',
-    author: 'Elena Marchetti',
-    role: 'Senior Correspondent, Brussels',
+    category: 'News',
+    headline: 'Netanyahu announces direct Israel-Lebanon talks, seeks Hezbollah disarmament',
+    excerpt: 'In a historic move, Israel\'s PM initiates negotiations to disarm Hezbollah and pursue peace with Lebanon, led by the US ambassador.',
+    author: 'Itamar Eichner & Lior Ben Ari',
+    role: 'Ynetnews Correspondents',
     timestamp: '2 hours ago',
-    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1294&h=543&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg',
   },
   {
-    category: 'Politics',
-    headline: 'Senate Fractures Over Proposed AI Regulation Bill as Tech Lobby Intensifies',
-    excerpt: 'A bipartisan proposal to establish federal oversight of artificial intelligence systems has encountered fierce resistance, with key committees deadlocked over provisions restricting training data access.',
-    author: 'David Okafor',
-    role: 'Washington Correspondent',
-    timestamp: '4 hours ago',
-    image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1294&h=543&fit=crop',
-  },
-  {
-    category: 'Science',
-    headline: 'Scientists Detect Unusual Seismic Signals Beneath Antarctic Ice Sheet',
-    excerpt: 'Geophysicists monitoring the Ross Ice Shelf have recorded a series of tremors inconsistent with known glacial dynamics, raising questions about subglacial volcanic activity beneath one of the world\'s most remote regions.',
-    author: 'Dr. Yuna Takahashi',
-    role: 'Science Editor',
+    category: 'News',
+    headline: 'Israeli air force redirects to Lebanon, intensifying strikes on Hezbollah',
+    excerpt: 'Approximately 50 fighter jets participated in the opening strike of Operation \'Eternal Darkness\' as the IDF escalates its campaign in the north.',
+    author: 'Elisha Ben Kimon',
+    role: 'Military Correspondent, Ynetnews',
     timestamp: '3 hours ago',
-    image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=1294&h=543&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/F-16_June_2008.jpg',
   },
   {
-    category: 'Tech',
-    headline: 'OpenMind Unveils Autonomous Research Agent Capable of Running Multi-Year Experiments',
-    excerpt: 'The San Francisco–based AI lab has demonstrated a fully autonomous system that can design, execute and interpret complex scientific studies without any human intervention during the research cycle.',
-    author: 'Marcus Trent',
-    role: 'Technology Correspondent',
-    timestamp: 'Yesterday',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1294&h=543&fit=crop',
+    category: 'Mideast News',
+    headline: 'UAE demands guarantees from Iran on Hormuz security, nuclear program and compensation',
+    excerpt: 'UAE urges curbs on Iranian ballistic missiles, drones and proxy groups as the ongoing war reshapes Gulf regional strategy.',
+    author: 'Lior Ben Ari',
+    role: 'Middle East Correspondent, Ynetnews',
+    timestamp: '1 hour ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg',
+  },
+  {
+    category: 'Magazine',
+    headline: 'She fights global terror for justice — and wins',
+    excerpt: 'Nitsana Darshan-Leitner has spent decades targeting terror financing through landmark lawsuits, winning cases that others said were impossible.',
+    author: 'Yael Feldman Shavit',
+    role: 'Magazine Editor, Ynetnews',
+    timestamp: '2 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/CourtGavel.JPG',
   },
 ]
 
 const secondaryStories = [
   {
-    category: 'Politics',
-    headline: 'Senate Fractures Over Proposed AI Regulation Bill as Tech Lobby Intensifies',
-    excerpt: 'A bipartisan proposal to establish federal oversight of artificial intelligence systems has encountered fierce resistance, with key committees deadlocked over provisions restricting training data access.',
-    author: 'David Okafor',
-    timestamp: '4 hours ago',
-    image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=415&h=174&fit=crop',
+    category: 'News',
+    headline: 'Iran warns Lebanon ceasefire breached, says \'critical hours\' ahead',
+    excerpt: 'Iranian aide claims alleged violations in the ceasefire agreement; talks conditional on halting Hezbollah strikes.',
+    author: 'Lior Ben Ari',
+    timestamp: '3 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg/415px-Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg',
   },
   {
-    category: 'Business',
-    headline: 'Federal Reserve Signals Pause in Rate Cuts as Inflation Edges Higher',
-    excerpt: 'The Fed will hold rates steady through the third quarter following unexpectedly strong consumer spending data, the chair announced Thursday, signalling a cautious approach to monetary easing.',
-    author: 'Sarah Chen',
-    timestamp: '6 hours ago',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=415&h=174&fit=crop',
+    category: 'Breaking News',
+    headline: 'Mojtaba Khamenei: \'Iran does not seek war — but will not give up its rights\'',
+    excerpt: 'The Supreme Leader\'s son speaks publicly as diplomatic tension mounts over nuclear negotiations and proxy war activity across the region.',
+    author: 'Lior Ben Ari',
+    timestamp: '1 hour ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Seyyed_Ali_Khamenei_and_Seyyed_Hassan_Nasrallah_by_khamenei.ir_01%282005%29_02.jpg',
   },
   {
-    category: 'Tech',
-    headline: 'OpenMind Unveils Autonomous Research Agent Capable of Running Multi-Year Experiments',
-    excerpt: 'The San Francisco–based AI lab has demonstrated a fully autonomous system that can design, execute and interpret complex scientific studies without any human intervention during the research cycle.',
-    author: 'Marcus Trent',
-    timestamp: 'Yesterday',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=415&h=174&fit=crop',
+    category: 'Breaking News',
+    headline: 'Lebanon claims 303 killed since launch of Operation \'Eternal Darkness\'',
+    excerpt: 'Lebanese Health Ministry reports 1,888 total deaths since early March; 303 killed in the latest Israeli military operation.',
+    author: 'Lior Ben Ari',
+    timestamp: '1 hour ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/%D8%A8%D9%8A%D8%B1%D9%88%D8%AA_%D8%A7%D9%84%D9%82%D8%B1%D9%86_19_%D8%A3%D8%B3%D9%88%D8%AF_%D8%A3%D8%A8%D9%8A%D8%B6.jpg',
   },
 ]
 
 const articles = [
   {
     id: 1,
-    category: 'Science',
-    headline: 'Scientists Detect Seismic Anomalies Under Antarctica',
-    excerpt: 'Geophysicists monitoring the Ross Ice Shelf have recorded a series of tremors inconsistent with known glacial dynamics, raising questions about subglacial volcanic activity.',
-    timestamp: '3 hours ago',
-    image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=220&h=92&fit=crop',
+    category: 'Breaking News',
+    headline: 'Hezbollah fires some 60 rockets at northern Israel since morning',
+    excerpt: 'Continued rocket barrages target communities across the Galilee as Home Front Command defensive policy remains active through tomorrow.',
+    timestamp: '2 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/220px-IDF_Iron_Dome_2021.jpg',
   },
   {
     id: 2,
-    category: 'Health',
-    headline: 'Microplastics Linked to Heart Disease in Under-40s',
-    excerpt: 'A 12-year longitudinal study tracking 48,000 participants has found a statistically significant correlation between blood microplastic concentration and early-onset arterial inflammation.',
-    timestamp: '5 hours ago',
-    image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=220&h=92&fit=crop',
+    category: 'Breaking News',
+    headline: 'Launches toward Nahariya intercepted; talks came at Trump\'s request — CNN',
+    excerpt: 'Netanyahu\'s direct negotiations announcement reportedly initiated at US President Trump\'s direction, according to CNN sources.',
+    timestamp: '2 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg/220px-President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg',
   },
   {
     id: 3,
-    category: 'Business',
-    headline: 'OPEC+ Cuts Output as Gulf States Pivot to Renewables',
-    excerpt: 'Saudi Arabia and the UAE announced coordinated reductions in crude output, citing a long-term strategic shift toward hydrogen and solar exports as global demand projections narrow.',
-    timestamp: '7 hours ago',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=220&h=92&fit=crop',
+    category: 'Breaking News',
+    headline: 'Alert in the Galilee Panhandle as missiles target Mishgav Am',
+    excerpt: 'Missile and rocket fire alert activated in Moshav Mishgav Am near the Lebanon border amid intensifying cross-border exchange.',
+    timestamp: '3 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Gilboa_123PAN.jpg/220px-Gilboa_123PAN.jpg',
   },
   {
     id: 4,
-    category: 'World',
-    headline: 'India Overtakes China as World\'s Top Steel Producer',
-    excerpt: 'India\'s steel output reached 38 million tonnes in Q2, outpacing China for the third straight quarter as infrastructure spending accelerates and Chinese domestic demand softens.',
-    timestamp: 'Yesterday',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=220&h=92&fit=crop',
+    category: 'Breaking News',
+    headline: 'Gal Hirsch to light torch alongside Ran Gvili\'s mother at Independence Day',
+    excerpt: 'Hostages coordinator and fallen soldier\'s mother selected for the Independence Day torch lighting ceremony.',
+    timestamp: '3 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/PikiWiki_Israel_1325_Israel_60th_independence_day_%D7%99%D7%95%D7%9D_%D7%94%D7%A2%D7%A6%D7%9E%D7%90%D7%95%D7%AA_%D7%94-60_%D7%9C%D7%9E%D7%93%D7%99%D7%A0%D7%AA_%D7%99%D7%A9%D7%A8%D7%90%D7%9C.jpg',
   },
   {
     id: 5,
-    category: 'Politics',
-    headline: 'Commission Flags Critical US Electoral Vulnerabilities',
-    excerpt: 'The bipartisan report, three years in the making, identifies critical gaps in voter registration infrastructure, ballot chain-of-custody protocols, and foreign interference detection.',
-    timestamp: 'Yesterday',
-    image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=220&h=92&fit=crop',
+    category: 'Breaking News',
+    headline: 'Ayalon Expressway Fast Lanes project to open Sunday',
+    excerpt: 'Highway 20 dedicated lane opening delayed by Iran war is now set for Sunday; features electric shuttles and 7,000-space parking.',
+    timestamp: '3 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/AyalonHW.jpg/220px-AyalonHW.jpg',
   },
 ]
 
 const tickerItems = [
-  'Breaking: EU and China Sign Historic Carbon Trade Agreement in Brussels',
-  'Senate AI Regulation Bill Advances to Committee Vote After Bipartisan Amendment',
-  'Antarctic Ice Sheet Anomaly: Scientists Detect Unusual Seismic Pattern Beneath Glacier',
-  'Federal Reserve Holds Rates Steady — Chair Signals Cautious Approach Through Year-End',
-  'India Surpasses China as World\'s Largest Steel Producer for Third Consecutive Quarter',
-  'OpenMind Autonomous Agent Passes Independent Peer Review — Study Published in Nature',
+  'Breaking: Netanyahu announces direct Israel-Lebanon talks, seeks Hezbollah disarmament',
+  'Operation \'Eternal Darkness\': ~50 Israeli fighter jets strike Hezbollah targets in Lebanon',
+  'UAE demands Iran guarantees on Hormuz security and nuclear program',
+  'Iran warns \'critical hours\' ahead as ceasefire violations alleged',
+  'Lebanon Health Ministry: 303 killed since launch of latest Israeli operation',
+  'Hezbollah fires 60+ rockets at northern Israel — alerts active across Galilee',
 ]
 const tickerText = tickerItems.join('     ·     ')
 const TICKER_CSS = `
@@ -224,74 +228,74 @@ const TICKER_CSS = `
 `
 
 const trending = [
-  'EU-China Carbon Deal Could Unlock $400 Billion in Climate Finance',
-  'Senate AI Bill Threatens to Split Both Parties Along Tech Lines',
-  'Antarctic Ice Sheet Signals Puzzle Climate Scientists Worldwide',
-  'Fed\'s Pause Decision Sends Conflicting Signals to Markets',
-  'OpenMind\'s Autonomous Agent Passes Independent Peer Review',
+  'Netanyahu announces direct Israel-Lebanon talks, seeks Hezbollah disarmament',
+  'Operation \'Eternal Darkness\': 50 jets strike Hezbollah — Lebanon reports 303 killed',
+  'UAE demands guarantees from Iran on Hormuz and nuclear program',
+  'Iran warns \'critical hours\' ahead as ceasefire violations alleged',
+  'Trump reportedly behind Netanyahu\'s decision to open Lebanon talks',
 ]
 
 const videos = [
   {
-    title: 'Carbon Markets Explained: Why This Deal Is Different',
-    duration: '4:32',
-    image: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=200&h=112&fit=crop',
+    title: 'Operation Eternal Darkness: What We Know So Far',
+    duration: '4:12',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/200px-IDF_Iron_Dome_2021.jpg',
   },
   {
-    title: 'Inside the Antarctic Research Station Detecting the Tremors',
-    duration: '6:17',
-    image: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=200&h=112&fit=crop',
+    title: 'Inside the Israel-Lebanon Ceasefire Negotiations',
+    duration: '5:48',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg/200px-President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg',
   },
 ]
 
 const shortVideos = [
-  { title: 'What is a Carbon Credit?', duration: '0:58', views: '2.1M', image: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=160&h=284&fit=crop' },
-  { title: 'Antarctic Ice Sheet in 60 Seconds', duration: '1:02', views: '891K', image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=160&h=284&fit=crop' },
-  { title: 'How Does the Fed Set Interest Rates?', duration: '0:55', views: '1.4M', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=160&h=284&fit=crop' },
-  { title: 'India\'s Steel Boom Explained', duration: '1:10', views: '743K', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=160&h=284&fit=crop' },
-  { title: 'What is an Autonomous AI Agent?', duration: '0:48', views: '3.2M', image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=160&h=284&fit=crop' },
-  { title: 'Senate AI Bill: Key Points', duration: '1:05', views: '567K', image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=160&h=284&fit=crop' },
-  { title: 'Gulf States\' Renewable Pivot', duration: '0:52', views: '418K', image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=160&h=284&fit=crop' },
-  { title: 'Electoral System Vulnerabilities', duration: '1:18', views: '1.1M', image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=160&h=284&fit=crop' },
-  { title: 'Microplastics: Inside Your Bloodstream', duration: '1:04', views: '2.7M', image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=160&h=284&fit=crop' },
-  { title: 'How Steel Gets Made in 60 Seconds', duration: '1:00', views: '934K', image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=160&h=284&fit=crop' },
+  { title: 'What is Hezbollah?', duration: '1:02', views: '3.4M', image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Seyyed_Ali_Khamenei_and_Seyyed_Hassan_Nasrallah_by_khamenei.ir_01%282005%29_02.jpg' },
+  { title: 'The Lebanon Border Explained', duration: '0:58', views: '1.8M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Gilboa_123PAN.jpg/160px-Gilboa_123PAN.jpg' },
+  { title: 'Iran\'s Nuclear Program in 60 Seconds', duration: '1:05', views: '2.1M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg/160px-Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg' },
+  { title: 'UAE-Iran Relations: A Brief History', duration: '1:10', views: '892K', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg/160px-Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg' },
+  { title: 'Israel\'s Iron Dome System Explained', duration: '0:55', views: '4.2M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/160px-IDF_Iron_Dome_2021.jpg' },
+  { title: 'Northern Israel: Life Under Alert', duration: '1:18', views: '1.3M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Gilboa_123PAN.jpg/160px-Gilboa_123PAN.jpg' },
+  { title: 'Hezbollah Rocket Range Map', duration: '0:48', views: '2.7M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/160px-IDF_Iron_Dome_2021.jpg' },
+  { title: 'What is Operation Eternal Darkness?', duration: '1:00', views: '5.1M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/F-16_June_2008.jpg/160px-F-16_June_2008.jpg' },
+  { title: 'Gaza to Lebanon: Shifting IDF Focus', duration: '1:15', views: '938K', image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Seyyed_Ali_Khamenei_and_Seyyed_Hassan_Nasrallah_by_khamenei.ir_01%282005%29_02.jpg' },
+  { title: 'Nahariya Under Fire: 60 Seconds', duration: '1:00', views: '1.1M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/160px-IDF_Iron_Dome_2021.jpg' },
 ]
 
 const opinions = [
   {
-    author: 'Dr. Priya Sharma',
-    role: 'Senior Fellow, Climate Policy Institute',
-    title: 'The Carbon Deal We\'ve Been Waiting For — And Why It May Not Be Enough',
-    excerpt: 'The EU-China framework is historic. But without binding enforcement mechanisms and a credible baseline methodology, it risks becoming another declaration with elegant architecture and hollow teeth.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=face',
-  },
-  {
-    author: 'James Whitfield',
-    role: 'Former NSA Analyst, Technology Commentator',
-    title: 'America\'s AI Governance Vacuum Is Now a National Security Issue',
-    excerpt: 'While Congress argues about training data restrictions, China is deploying AI systems in defence contexts at a pace that should alarm anyone paying attention. The Senate deadlock isn\'t just a political failure.',
+    author: 'Nahum Barnea',
+    role: 'Senior Political Commentator, Ynetnews',
+    title: 'The Lebanon Talks Are Real — But Hezbollah\'s Disarmament Is Not',
+    excerpt: 'Netanyahu\'s announcement opens a genuine diplomatic channel. What it cannot do is deliver on its central demand. Hezbollah will not surrender its weapons — and everyone in the room knows it.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face',
   },
   {
-    author: 'Lena Goldberg',
-    role: 'Chief Economist, Meridian Analytics',
-    title: 'The Fed Is Playing a Dangerous Game With Inflation Psychology',
-    excerpt: 'Pausing cuts while headline inflation ticks up even modestly risks anchoring inflation expectations in a way that forces far more aggressive action later. The cost of caution may be higher than it appears.',
+    author: 'Shimon Shiffer',
+    role: 'Defense Analyst, Ynetnews',
+    title: 'Operation Eternal Darkness Is Sending a Message Beyond Lebanon',
+    excerpt: 'Fifty jets in an opening strike is not a tactical decision — it\'s a signal to Tehran, to Washington, and to every proxy in the region that Israel\'s deterrence posture has fundamentally shifted.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=face',
+  },
+  {
+    author: 'Rina Bassist',
+    role: 'Gulf Affairs Correspondent, Ynetnews',
+    title: 'The UAE Is Quietly Reshaping the Region\'s Security Architecture',
+    excerpt: 'Abu Dhabi\'s demands from Iran are not just defensive posturing. They represent a deliberate effort to formalize a new regional order — one that sidelines Tehran while the world is distracted.',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face',
   },
 ]
 
 const footerSections = [
   {
-    heading: 'News',
-    links: ['World', 'Politics', 'Business', 'Technology', 'Science', 'Health', 'Entertainment'],
+    heading: 'Sections',
+    links: ['Breaking News', 'Mideast News', 'Magazine', 'Opinion', 'Sports', 'Culture', 'Business'],
   },
   {
     heading: 'Opinion',
     links: ['Columnists', 'Letters', 'Analysis', 'Editorials'],
   },
   {
-    heading: 'Company',
+    heading: 'Ynetnews',
     links: ['About Us', 'Careers', 'Press Room', 'Advertise', 'Contact'],
   },
   {
@@ -373,11 +377,13 @@ function FiboPanel({ onClose }: { onClose: () => void }) {
 export default function NewsPage() {
   const [showFibo, setShowFibo] = useState(false)
   const [heroIndex, setHeroIndex] = useState(0)
+  const [heroHovered, setHeroHovered] = useState(false)
 
   useEffect(() => {
+    if (heroHovered) return
     const t = setInterval(() => setHeroIndex(i => (i + 1) % heroSlides.length), 3000)
     return () => clearInterval(t)
-  }, [])
+  }, [heroHovered])
 
   const hero = heroSlides[heroIndex]
 
@@ -422,7 +428,7 @@ export default function NewsPage() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       {/* Width: 1294px (full content area). Height: 1294×42% = 543px */}
-      <section style={s.heroSection}>
+      <section style={s.heroSection} onMouseEnter={() => setHeroHovered(true)} onMouseLeave={() => setHeroHovered(false)}>
         <div style={s.heroWrap}>
           <div style={s.heroImg}>
             <img
