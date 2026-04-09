@@ -266,7 +266,7 @@ export default function Signals() {
       {/* ── INTERACTIVE WALKTHROUGH ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Try it</span>
             </div>
@@ -386,7 +386,7 @@ export default function Signals() {
       {/* ── SIGNAL REFERENCE ── */}
       <section style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Reference</span>
             </div>

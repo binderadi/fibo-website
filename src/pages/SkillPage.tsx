@@ -153,7 +153,7 @@ export default function SkillPage() {
       {/* ── WHAT IT IS ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Overview</span>
             </div>
@@ -182,7 +182,7 @@ export default function SkillPage() {
       {/* ── THE SEQUENCE ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">The Sequence</span>
             </div>
@@ -221,7 +221,7 @@ export default function SkillPage() {
       {/* ── TWO LAYERS + TWO MODES ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Two Layers</span>
             </div>
@@ -248,7 +248,7 @@ export default function SkillPage() {
 
           <div style={{ height: 'var(--sp48)' }} />
 
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Two Modes</span>
             </div>
@@ -286,7 +286,7 @@ export default function SkillPage() {
       {/* ── SIGNAL FLOW ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Signal Flow</span>
             </div>
@@ -327,7 +327,7 @@ export default function SkillPage() {
       {/* ── TYPOGRAPHY ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Typography</span>
             </div>
@@ -400,7 +400,7 @@ export default function SkillPage() {
       {/* ── SPACING ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Spacing</span>
             </div>
@@ -491,7 +491,7 @@ export default function SkillPage() {
       {/* ── LAYOUT ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Layout</span>
             </div>
@@ -568,7 +568,7 @@ export default function SkillPage() {
       {/* ── COLOR ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Color</span>
             </div>
@@ -648,7 +648,7 @@ export default function SkillPage() {
       {/* ── VERIFICATION ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Verification</span>
             </div>
@@ -685,7 +685,7 @@ export default function SkillPage() {
       {/* ── WHAT FIBO DOES NOT DEFINE ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Out of scope</span>
             </div>
@@ -719,7 +719,7 @@ export default function SkillPage() {
       {/* ── CRITICAL RULES ── */}
       <section style={st.section}>
         <div className="content">
-          <div style={st.twoCol}>
+          <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Critical rules</span>
             </div>
@@ -791,14 +791,8 @@ const st: Record<string, React.CSSProperties> = {
     paddingBottom: 'var(--sp96)',
   },
 
-  twoCol: {
-    display: 'flex',
-    gap: 'var(--gutter)',
-    alignItems: 'flex-start',
-  },
+  twoCol: {},
   colLabel: {
-    width: 'var(--col-sidebar)',
-    flexShrink: 0,
     paddingTop: '6px',
   },
   colContent: {
@@ -852,6 +846,7 @@ const st: Record<string, React.CSSProperties> = {
   /* Ratio cards */
   ratioRow: {
     display: 'flex',
+    flexWrap: 'wrap',
     gap: 'var(--sp16)',
     marginTop: 'var(--sp32)',
   },
@@ -889,6 +884,7 @@ const st: Record<string, React.CSSProperties> = {
   /* Two-card row */
   cardRow: {
     display: 'flex',
+    flexWrap: 'wrap',
     gap: 'var(--sp16)',
     marginTop: 'var(--sp24)',
   },

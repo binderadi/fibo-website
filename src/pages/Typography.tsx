@@ -75,7 +75,7 @@ export default function Typography() {
       {/* ── GAP-FILLING EXPLANATION ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">How it's built</span>
             </div>
@@ -126,7 +126,7 @@ export default function Typography() {
       {/* ── TYPE SCALE WATERFALL ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Live scale</span>
             </div>
@@ -144,6 +144,7 @@ export default function Typography() {
             {typeScale.map((entry, i) => (
               <div
                 key={entry.size}
+                className="two-col"
                 style={{
                   ...styles.waterfallRow,
                   borderBottom: i < typeScale.length - 1 ? '1px solid var(--c-border)' : 'none',
@@ -180,7 +181,7 @@ export default function Typography() {
       {/* ── LINE HEIGHTS ── */}
       <section style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Line heights</span>
             </div>
@@ -360,11 +361,8 @@ const styles: Record<string, React.CSSProperties> = {
     border: '1px solid var(--c-border)',
   },
   waterfallRow: {
-    display: 'grid',
-    gridTemplateColumns: 'var(--col-sidebar) 1fr',  /* 330px meta + 940px content */
-    gap: 'var(--gutter)',
     padding: 'var(--sp24) 0',
-    alignItems: 'center',
+    alignItems: 'center',  /* override two-col's align-items: start */
   },
   waterfallMeta: {
     padding: '0 var(--sp24)',

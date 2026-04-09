@@ -138,7 +138,7 @@ export default function Home() {
           <div style={styles.featuresMeta}>
             <span className="label">What's in FIBO</span>
           </div>
-          <div style={styles.featuresGrid}>
+          <div className="grid-3">
             {features.map((f) => (
               <Link key={f.number} to={f.to} style={styles.card}>
                 <span className="mono" style={styles.cardNumber}>{f.number}</span>
@@ -154,7 +154,7 @@ export default function Home() {
       {/* ── PHILOSOPHY BLOCK ── */}
       <section style={styles.philosophySection}>
         <div className="content">
-          <div style={styles.philosophyGrid}>
+          <div className="two-col">
             <div style={styles.philosophyLeft}>
               <span className="label">Philosophy</span>
             </div>

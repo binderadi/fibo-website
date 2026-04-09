@@ -116,7 +116,7 @@ export default function Nav() {
         </div>
 
         {/* Nav links */}
-        <ul style={styles.links}>
+        <ul className="nav-links">
           {systemLinks.slice(1).map(({ to, label }) => (
             <li key={to}>
               <NavLink

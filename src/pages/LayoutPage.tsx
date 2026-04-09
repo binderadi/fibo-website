@@ -82,7 +82,7 @@ export default function LayoutPage() {
       {/* ── CONTENT AREA RULER ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Canvas ruler</span>
             </div>
@@ -182,7 +182,7 @@ export default function LayoutPage() {
       {/* ── SIX STEPS ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Six steps</span>
             </div>
@@ -226,7 +226,7 @@ export default function LayoutPage() {
       {/* ── COMBINING SECTIONS ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Combining sections</span>
             </div>
@@ -260,7 +260,7 @@ export default function LayoutPage() {
       {/* ── RESTRUCTURING RULE ── */}
       <section style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Restructuring rule</span>
             </div>

@@ -450,6 +450,7 @@ function CategorySection({
       </div>
 
       {/* 3-column kanban grid */}
+      <div className="kanban-scroll">
       <div style={{
         display:             'grid',
         gridTemplateColumns: '1fr 1fr 1fr',
@@ -465,6 +466,7 @@ function CategorySection({
             onAdd={onAdd}
           />
         ))}
+      </div>
       </div>
     </section>
   )

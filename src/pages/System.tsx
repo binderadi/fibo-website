@@ -56,7 +56,7 @@ export default function System() {
       {/* ── CORE RATIOS ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Core Ratios</span>
             </div>
@@ -144,7 +144,7 @@ export default function System() {
       {/* ── TWO LAYERS ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Two Layers</span>
             </div>
@@ -155,7 +155,7 @@ export default function System() {
                 Layer 2 is the practical reality.
               </p>
 
-              <div style={styles.layerGrid}>
+              <div className="grid-2">
                 <div style={styles.layerCard}>
                   <div style={styles.layerTag}>Layer 1</div>
                   <h3 style={styles.layerTitle}>FIBO Core</h3>
@@ -203,7 +203,7 @@ export default function System() {
       {/* ── TWO MODES ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Two Modes</span>
             </div>
@@ -214,7 +214,7 @@ export default function System() {
                 or from the container inward. The five signals tell you which.
               </p>
 
-              <div style={styles.modesGrid}>
+              <div className="grid-2">
                 <div style={styles.modeCard}>
                   <div style={styles.modeArrow}>↙</div>
                   <h3 style={styles.modeTitle}>Outside-In</h3>
@@ -252,7 +252,7 @@ export default function System() {
       {/* ── FIVE TOOLS ── */}
       <section style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Five Tools</span>
             </div>

@@ -115,3 +115,60 @@ body {
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--c-surface); }
 ::-webkit-scrollbar-thumb { background: var(--c-border-2); border-radius: 0; }
+
+/* ─────────────────────────────────────────
+ * RESPONSIVE LAYOUT UTILITIES
+ * ───────────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: var(--col-sidebar) 1fr;
+  gap: var(--gutter);
+  align-items: start;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gutter);
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp16);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp32);
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding-left: var(--sp24);
+    padding-right: var(--sp24);
+  }
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: var(--sp16);
+  }
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+  }
+  .kanban-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .kanban-scroll > div {
+    min-width: 640px;
+  }
+}

@@ -49,7 +49,7 @@ export default function SpacingPage() {
       {/* ── BASELINE GRID ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Baseline grid</span>
             </div>
@@ -94,7 +94,7 @@ export default function SpacingPage() {
       {/* ── GESTALT PROXIMITY ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Gestalt proximity</span>
             </div>
@@ -136,7 +136,7 @@ export default function SpacingPage() {
                 <span className="label" style={{ display: 'block', marginBottom: 'var(--sp16)' }}>
                   Live example — correct proximity
                 </span>
-                <div style={styles.proximityDemo}>
+                <div className="grid-3">
                   {[
                     { title: 'Signal 1', body: 'Has this value already been established?' },
                     { title: 'Signal 2', body: 'Does a hard constraint exist?' },
@@ -177,7 +177,7 @@ export default function SpacingPage() {
       {/* ── GUTTERS ── */}
       <section style={styles.section}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Gutters</span>
             </div>
@@ -197,7 +197,7 @@ export default function SpacingPage() {
               </p>
 
               {/* Gutter options */}
-              <div style={styles.gutterGrid}>
+              <div className="grid-4">
                 {[8, 16, 24, 32].map((g) => (
                   <div
                     key={g}
@@ -231,7 +231,7 @@ export default function SpacingPage() {
       {/* ── DENSITY LEVERS ── */}
       <section style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
-          <div style={styles.twoCol}>
+          <div className="two-col">
             <div style={styles.colLabel}>
               <span className="label">Density levers</span>
             </div>
@@ -243,7 +243,7 @@ export default function SpacingPage() {
                 valid FIBO results.
               </p>
 
-              <div style={styles.densityGrid}>
+              <div className="grid-3">
                 {densityExamples.map((ex) => (
                   <div key={ex.label} style={styles.densityExample}>
                     <span className="label" style={{ display: 'block', marginBottom: 'var(--sp16)' }}>
