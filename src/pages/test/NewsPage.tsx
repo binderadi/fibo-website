@@ -1012,7 +1012,7 @@ const s: Record<string, React.CSSProperties> = {
   },
   articleThumb: {
     width: '220px',
-    height: '92px',               /* 220 × 42% = 92.4 → 92px */
+    height: '128px',              /* 220 × 58% = 127.6 → 128px */
     objectFit: 'cover',
     display: 'block',
     borderRadius: '8px',
