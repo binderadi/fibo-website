@@ -13,14 +13,14 @@ import { Link } from 'react-router-dom'
  *   Height: 1294 × 42% = 543.48 → 543px
  *
  * Two-column feature section (gutter mechanic: subtract first):
- *   Post-gutter:  1294 − 24 = 1270px
- *   Main (F4+F5): 1270 × 68% = 863.6 → 864px
- *   Sidebar:      1270 × 32% = 406.4 → 406px
- *   Check:        864 + 24 + 406 = 1294 ✓
+ *   Post-gutter:  1294 − 48 = 1246px
+ *   Main (F4+F5): 1246 × 68% = 847.3 → 847px
+ *   Sidebar:      1246 × 32% = 398.7 → 399px
+ *   Check:        847 + 48 + 399 = 1294 ✓
  *
  * Feature article image (Outside-In from main col):
- *   Width:  864px
- *   Height: 864 × 42% = 362.88 → 363px
+ *   Width:  847px
+ *   Height: 847 × 42% = 355.7 → 356px
  *
  * 3-column destinations grid (equal-width):
  *   Post-gutter:  1294 − (2×24) = 1246px
@@ -223,7 +223,7 @@ export default function RoamPage() {
           <div style={s.featureMain}>
             <div style={s.featureImgWrap}>
               <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=864&h=363&fit=crop"
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=847&h=356&fit=crop"
                 alt="Turquoise waters of a remote coastline"
                 style={s.featureImg}
               />
@@ -518,18 +518,18 @@ const s: Record<string, React.CSSProperties> = {
   /* ── Feature section ────────────────────────────────────────── */
   featureSection: {
     display: 'flex',
-    gap: '24px',
+    gap: '48px',
     paddingTop: '96px',
     paddingBottom: '96px',
     alignItems: 'flex-start',
   },
   featureMain: {
-    width: '864px',
+    width: '847px',
     flexShrink: 0,
   },
   featureImgWrap: {
-    width: '864px',
-    height: '363px',        /* 864 × 42% = 363px */
+    width: '847px',
+    height: '356px',        /* 847 × 42% = 356px */
     overflow: 'hidden',
     borderRadius: '8px',
     marginBottom: '24px',
@@ -583,8 +583,10 @@ const s: Record<string, React.CSSProperties> = {
   },
 
   featureSidebar: {
-    width: '406px',
+    width: '399px',
     flexShrink: 0,
+    borderLeft: `1px solid ${C.border}`,
+    paddingLeft: '48px',
   },
   sidebarHeader: {
     fontSize: '10px',
