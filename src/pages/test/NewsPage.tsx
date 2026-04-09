@@ -538,7 +538,7 @@ export default function NewsPage() {
                       style={{ ...s.articleThumb, ...(isMobile && { width: '100%', height: 'auto', aspectRatio: '16/9', borderRadius: '8px 8px 0 0' }) }}
                       referrerPolicy="no-referrer"
                     />
-                    <div style={{ ...s.articleBody, ...(isMobile && { paddingRight: 0 }) }}>
+                    <div style={{ ...s.articleBody, ...(isMobile && { paddingRight: 0, paddingTop: '16px' }) }}>
                       <span style={{ ...s.catTagSmall, color: CAT_COLORS[article.category], borderColor: CAT_COLORS[article.category] }}>
                         {article.category}
                       </span>
