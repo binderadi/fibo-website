@@ -1024,8 +1024,8 @@ const s: Record<string, React.CSSProperties> = {
     borderBottom: `1px solid ${C.border}`,
   },
   trendingNum: {
-    fontSize: '34px',             /* 34px / 40px lh — large decorative numeral */
-    lineHeight: '40px',
+    fontSize: '34px',
+    lineHeight: '1',              /* collapse to font-size so top of box = top of glyph */
     fontWeight: 700,
     color: C.accent,
     fontFamily: "'JetBrains Mono', monospace",
@@ -1037,7 +1037,7 @@ const s: Record<string, React.CSSProperties> = {
     lineHeight: '24px',
     color: C.text,
     fontWeight: 500,
-    paddingTop: '8px',            /* optical: align to numeral cap-height */
+    paddingRight: '24px',
   },
 
   videoList: {
