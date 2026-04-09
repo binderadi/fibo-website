@@ -9,15 +9,13 @@ import { Link } from 'react-router-dom'
  * Margin:         1470 × 6% = 88.2 → 88px
  * Content area:   1470 − (2×88) = 1294px
  *
- * Two-column content grid (gutter mechanic: subtract first)
- *   Post-gutter:  1294 − 48 = 1246px
- *   Main (F4+F5): 1246 × 68% = 847.3 → 847px
- *   Sidebar:      1246 × 32% = 398.7 → 399px
- *   Check:        847 + 48 + 399 = 1294 ✓
- *
- * 3-column secondary stories (equal-width repeating)
+ * Shared 3-column grid (secondary stories + content grid)
+ *   Both sections use repeat(3, 1fr) gap 24px — columns align top-to-bottom
  *   Post-gutter:  1294 − (2×24) = 1246px
- *   Each card:    1246 ÷ 3 = 415.3 → 415px
+ *   Each column:  1246 ÷ 3 = 415.3 → 415px
+ *   Main (Latest News): spans cols 1+2 = 854px
+ *   Sidebar (Trending):  col 3 = 415px  ← aligns exactly with 3rd secondary card
+ *   Check:        854 + 24 + 415 = 1293 ≈ 1294 ✓ (browser resolves via 1fr)
  *   Card image h: 415 × 42% = 174.3 → 174px   (media: 42% landscape)
  *
  * Hero image (Outside-In, Signal 5: adaptive)
@@ -925,11 +923,12 @@ const s: Record<string, React.CSSProperties> = {
   },
   contentGrid: {
     display: 'grid',
-    gridTemplateColumns: '847px 399px', /* main + sidebar, gutter via gap */
-    gap: '48px',                         /* gutter */
+    gridTemplateColumns: 'repeat(3, 1fr)', /* matches secondary grid: (1294−48)÷3 = 415px each */
+    gap: '24px',                            /* same gutter as secondary grid */
     alignItems: 'start',
   },
   mainCol: {
+    gridColumn: '1 / 3',                   /* spans cols 1+2 = ~854px (aligns with cards 1+2 above) */
     display: 'flex',
     flexDirection: 'column',
     gap: '24px',
@@ -1003,7 +1002,7 @@ const s: Record<string, React.CSSProperties> = {
     flexDirection: 'column',
     gap: '48px',                  /* 48px — between sidebar widgets */
     borderLeft: `1px solid ${C.border}`,
-    paddingLeft: '48px',
+    paddingLeft: '24px',          /* 24px breathing room — grid gap provides the other 24px */
   },
   sideWidget: {
     display: 'flex',
