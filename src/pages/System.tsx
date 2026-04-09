@@ -74,7 +74,7 @@ export default function System() {
                     key={s.name}
                     style={{
                       ...styles.ratioSection,
-                      width: s.px,
+                      width: s.pct,
                       background: s.color,
                       color: s.textColor,
                     }}
@@ -86,6 +86,7 @@ export default function System() {
               </div>
 
               {/* Table */}
+              <div style={{ overflowX: 'auto' }}>
               <table style={styles.table}>
                 <thead>
                   <tr>
@@ -119,6 +120,7 @@ export default function System() {
                   </tr>
                 </tbody>
               </table>
+              </div>
               <p style={styles.note}>
                 * 1px rounding loss across 5 values (78+129+207+336+543 = 1293 not 1294).
                 This is Layer 2 — pixel rendering — rounding is expected and correct.
