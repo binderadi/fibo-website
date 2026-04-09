@@ -30,7 +30,7 @@ import initialData from '../data/backlog.json'
 
 // ─── TYPES ─────────────────────────────────────────────────────────────
 type Status   = 'not_started' | 'in_progress' | 'done'
-type Category = 'design_system' | 'color' | 'design_system_architecture' | 'subagent_pipeline' | 'docs_website' | 'test_designs'
+type Category = 'design_system' | 'color' | 'design_system_architecture' | 'docs_website' | 'test_designs'
 
 interface BacklogItem {
   id:            string
@@ -47,7 +47,6 @@ const CATEGORIES: { id: Category; label: string }[] = [
   { id: 'design_system',              label: 'Design System'                      },
   { id: 'color',                      label: 'Color'                              },
   { id: 'design_system_architecture', label: 'Design System Architecture'         },
-  { id: 'subagent_pipeline',          label: 'Subagent Pipeline'                  },
   { id: 'docs_website',               label: 'Documentation Website'              },
   { id: 'test_designs',               label: 'Test Designs'                       },
 ]

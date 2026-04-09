@@ -271,150 +271,6 @@
       "dateCompleted": "2026-04-07"
     },
     {
-      "id": "sp-1",
-      "title": "Define design spec JSON format",
-      "description": "Standard output format all subagents consume",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-2",
-      "title": "Build fibo-designer subagent",
-      "description": "Runs signal flow, outputs design spec, writes zero code",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-3",
-      "title": "Test designer independently",
-      "description": "Feed it observatory brief, verify complete spec",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-4",
-      "title": "Build fibo-architect subagent",
-      "description": "Creates token hierarchy + component scaffold from spec",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-5",
-      "title": "Test architect independently",
-      "description": "Feed it designer's spec, verify token structure",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-6",
-      "title": "Build fibo-builder subagent",
-      "description": "Composes pages from components, no invented values",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-7",
-      "title": "Test builder independently",
-      "description": "Feed it architect's output, verify no hardcoded values",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-8",
-      "title": "Build fibo-auditor subagent",
-      "description": "Reviews pages against spec, produces violation report",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-9",
-      "title": "Test auditor independently",
-      "description": "Point at tracker page, verify it catches issues",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-10",
-      "title": "Write /fibo-build orchestration command",
-      "description": "Triggers full pipeline: design → architect → build → audit",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-11",
-      "title": "End-to-end test: simple brief",
-      "description": "Single landing page through full pipeline",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-12",
-      "title": "End-to-end test: medium brief",
-      "description": "SaaS pricing page through full pipeline",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-13",
-      "title": "End-to-end test: complex brief",
-      "description": "Observatory through full pipeline",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-14",
-      "title": "Create /fibo-audit-and-fix command",
-      "description": "Audit any URL + auto-fix cycle",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-15",
-      "title": "Build design spec library",
-      "description": "Save approved specs for reference in future projects",
-      "status": "not_started",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": null
-    },
-    {
-      "id": "sp-16",
-      "title": "Implementation plan document",
-      "description": "Full 5-phase plan with file structure and dependencies",
-      "status": "done",
-      "category": "subagent_pipeline",
-      "dateAdded": "2026-04-07",
-      "dateCompleted": "2026-04-07"
-    },
-    {
       "id": "doc-1",
       "title": "Add Color page",
       "description": "Explain shade steps, proportion, opacity with visualizations",
@@ -508,19 +364,28 @@
       "id": "td-9",
       "title": "Observatory",
       "description": "Deep space research institute, dark/light alternating, data viz, timeline, gallery",
-      "status": "not_started",
+      "status": "done",
       "category": "test_designs",
       "dateAdded": "2026-04-07",
+      "dateCompleted": "2026-04-09"
+    },
+    {
+      "id": "td-10",
+      "title": "Roam",
+      "description": "Travel / adventure design, in progress",
+      "status": "in_progress",
+      "category": "test_designs",
+      "dateAdded": "2026-04-09",
       "dateCompleted": null
     },
     {
       "id": "td-6",
       "title": "Jazz Club",
       "description": "Dark theme landing page, tests FIBO color system",
-      "status": "in_progress",
+      "status": "done",
       "category": "test_designs",
       "dateAdded": "2026-04-05",
-      "dateCompleted": null
+      "dateCompleted": "2026-04-09"
     },
     {
       "id": "td-7",
