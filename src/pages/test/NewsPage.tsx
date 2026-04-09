@@ -244,6 +244,19 @@ const videos = [
   },
 ]
 
+const shortVideos = [
+  { title: 'What is a Carbon Credit?', duration: '0:58', views: '2.1M', image: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=160&h=284&fit=crop' },
+  { title: 'Antarctic Ice Sheet in 60 Seconds', duration: '1:02', views: '891K', image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=160&h=284&fit=crop' },
+  { title: 'How Does the Fed Set Interest Rates?', duration: '0:55', views: '1.4M', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=160&h=284&fit=crop' },
+  { title: 'India\'s Steel Boom Explained', duration: '1:10', views: '743K', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=160&h=284&fit=crop' },
+  { title: 'What is an Autonomous AI Agent?', duration: '0:48', views: '3.2M', image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=160&h=284&fit=crop' },
+  { title: 'Senate AI Bill: Key Points', duration: '1:05', views: '567K', image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=160&h=284&fit=crop' },
+  { title: 'Gulf States\' Renewable Pivot', duration: '0:52', views: '418K', image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=160&h=284&fit=crop' },
+  { title: 'Electoral System Vulnerabilities', duration: '1:18', views: '1.1M', image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=160&h=284&fit=crop' },
+  { title: 'Microplastics: Inside Your Bloodstream', duration: '1:04', views: '2.7M', image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=160&h=284&fit=crop' },
+  { title: 'How Steel Gets Made in 60 Seconds', duration: '1:00', views: '934K', image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=160&h=284&fit=crop' },
+]
+
 const opinions = [
   {
     author: 'Dr. Priya Sharma',
@@ -566,6 +579,29 @@ export default function NewsPage() {
               </div>
 
             </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SHORT VIDEOS ─────────────────────────────────────────── */}
+      <section style={s.shortVideoSection}>
+        <div style={s.contentArea}>
+          <div style={s.sectionHeader}>
+            <span style={s.sectionLabel}>Short Videos</span>
+            <div style={s.sectionLine} />
+          </div>
+          <div style={s.shortVideoScroll}>
+            {shortVideos.map((v, i) => (
+              <div key={i} style={s.shortVideoCard}>
+                <div style={s.shortVideoThumbWrap}>
+                  <img src={v.image} alt={v.title} style={s.shortVideoThumb} />
+                  <span style={s.shortVideoDuration}>{v.duration}</span>
+                  <div style={s.shortVideoPlay}>▶</div>
+                </div>
+                <p style={s.shortVideoTitle}>{v.title}</p>
+                <span style={s.shortVideoViews}>{v.views} views</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1104,6 +1140,83 @@ const s: Record<string, React.CSSProperties> = {
     color: C.text,
     fontWeight: 500,
     margin: 0,
+  },
+
+  /* ── Short Videos ── */
+  shortVideoSection: {
+    paddingTop: '48px',
+    paddingBottom: '48px',
+    background: C.surface,
+    borderTop: `1px solid ${C.border}`,
+    borderBottom: `1px solid ${C.border}`,
+  },
+  shortVideoScroll: {
+    display: 'flex',
+    gap: '24px',
+    overflowX: 'auto',
+    scrollSnapType: 'x mandatory',
+    scrollbarWidth: 'none' as const,
+  },
+  shortVideoCard: {
+    flexShrink: 0,
+    width: 'calc((100% - 4 * 24px) / 5)', /* show 5 cards, remainder scrollable */
+    scrollSnapAlign: 'start',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '8px',
+    cursor: 'pointer',
+  },
+  shortVideoThumbWrap: {
+    position: 'relative' as const,
+    width: '100%',
+    aspectRatio: '9 / 16',          /* portrait 9:16 — browser computes height */
+    borderRadius: '8px',
+    overflow: 'hidden',
+    background: C.border,
+  },
+  shortVideoThumb: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover' as const,
+    display: 'block',
+  },
+  shortVideoDuration: {
+    position: 'absolute' as const,
+    bottom: '8px',
+    right: '8px',
+    background: 'rgba(0,0,0,0.75)',
+    color: '#fff',
+    fontSize: '11px',
+    lineHeight: '16px',
+    padding: '2px 6px',
+    borderRadius: '4px',
+    fontWeight: 600,
+  },
+  shortVideoPlay: {
+    position: 'absolute' as const,
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    background: 'rgba(0,0,0,0.55)',
+    color: '#fff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+  },
+  shortVideoTitle: {
+    fontSize: '13px',
+    lineHeight: '24px',
+    fontWeight: 600,
+    color: C.text,
+  },
+  shortVideoViews: {
+    fontSize: '11px',
+    lineHeight: '16px',
+    color: C.muted,
   },
 
   /* ── Opinion ── */
