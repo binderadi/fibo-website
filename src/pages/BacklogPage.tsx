@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useHashNav } from '../hooks/useHashNav'
 import initialData from '../data/backlog.json'
 
 /*
@@ -428,13 +429,14 @@ function CategorySection({
   onMove:   (id: string, status: Status) => void
   onAdd:    (item: BacklogItem) => void
 }) {
+  const sectionId = category.id.replace(/_/g, '-')
   const byStatus = (s: Status) => items.filter(i => i.status === s)
   const total    = items.length
   const done     = byStatus('done').length
   const pct      = total > 0 ? Math.round((done / total) * 100) : 0
 
   return (
-    <section>
+    <section id={sectionId}>
       {/* Section header */}
       <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px' }}>
         <h2 style={{ fontSize: '21px', lineHeight: '32px', fontWeight: 600, color: '#111111', margin: 0 }}>
@@ -474,6 +476,7 @@ function CategorySection({
 
 // ─── ROOT ───────────────────────────────────────────────────────────────
 export default function BacklogPage() {
+  useHashNav()
   const [items, setItems] = useState<BacklogItem[]>(loadItems)
   const [copied, setCopied] = useState(false)
 

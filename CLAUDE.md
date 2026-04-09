@@ -79,6 +79,15 @@ These are decided and must not be changed without Adi's explicit approval:
 - 5 minor violations remain (V8-A through V8-D, V11-A) — all low visual impact
 - Full audit history: `~/thornfield-manor/audit-report-v10.md`
 
+## Fixes Folder
+
+The `fixes/` folder in this directory is used by Adi to drop screenshots and images flagging issues with the site. Rules:
+
+- Every image in `references/` is an issue — never describe an image as "fine" or "looks OK"
+- Read all images before acting. Identify the specific problem in each one before writing any code
+- If the issue in an image is not clear after reading it, **ask Adi what the problem is** before attempting a fix
+- Do not guess at an issue and silently fix the wrong thing — a wrong fix wastes a review cycle
+
 ## Working Agreements
 
 - **Numerical precision:** Never estimate or approximate. Calculate precisely. Say "I'm not sure" rather than guessing.

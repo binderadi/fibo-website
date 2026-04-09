@@ -56,7 +56,10 @@ const gapFills: GapEntry[] = [
   { gap: '34 → 55', rulerF5: 34, plus1: 39, plus2: 42, chosen: '— (skipped)' },
 ]
 
+import { useHashNav } from '../hooks/useHashNav'
+
 export default function Typography() {
+  useHashNav()
   return (
     <div>
       {/* ── PAGE HEADER ── */}
@@ -73,7 +76,7 @@ export default function Typography() {
       </header>
 
       {/* ── GAP-FILLING EXPLANATION ── */}
-      <section style={styles.section}>
+      <section id="how-its-built" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -124,7 +127,7 @@ export default function Typography() {
       </section>
 
       {/* ── TYPE SCALE WATERFALL ── */}
-      <section style={styles.section}>
+      <section id="live-scale" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -179,7 +182,7 @@ export default function Typography() {
       </section>
 
       {/* ── LINE HEIGHTS ── */}
-      <section style={{ ...styles.section, borderBottom: 'none' }}>
+      <section id="line-heights" style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>

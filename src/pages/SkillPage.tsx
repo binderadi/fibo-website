@@ -133,7 +133,10 @@ const notDefined = [
 
 // ─── COMPONENT ────────────────────────────────────────────────────
 
+import { useHashNav } from '../hooks/useHashNav'
+
 export default function SkillPage() {
+  useHashNav()
   return (
     <div>
 
@@ -151,7 +154,7 @@ export default function SkillPage() {
       </header>
 
       {/* ── WHAT IT IS ── */}
-      <section style={st.section}>
+      <section id="overview" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -180,7 +183,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── THE SEQUENCE ── */}
-      <section style={st.section}>
+      <section id="sequence" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -218,8 +221,8 @@ export default function SkillPage() {
 
       <div className="divider" />
 
-      {/* ── TWO LAYERS + TWO MODES ── */}
-      <section style={st.section}>
+      {/* ── TWO LAYERS ── */}
+      <section id="two-layers" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -245,9 +248,14 @@ export default function SkillPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div style={{ height: 'var(--sp48)' }} />
+      <div className="divider" />
 
+      {/* ── TWO MODES ── */}
+      <section id="two-modes" style={st.section}>
+        <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
               <span className="label">Two Modes</span>
@@ -284,7 +292,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── SIGNAL FLOW ── */}
-      <section style={st.section}>
+      <section id="signal-flow" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -325,7 +333,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── TYPOGRAPHY ── */}
-      <section style={st.section}>
+      <section id="typography" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -398,7 +406,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── SPACING ── */}
-      <section style={st.section}>
+      <section id="spacing" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -489,7 +497,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── LAYOUT ── */}
-      <section style={st.section}>
+      <section id="layout" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -566,7 +574,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── COLOR ── */}
-      <section style={st.section}>
+      <section id="color" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -646,7 +654,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── VERIFICATION ── */}
-      <section style={st.section}>
+      <section id="verification" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -683,7 +691,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── WHAT FIBO DOES NOT DEFINE ── */}
-      <section style={st.section}>
+      <section id="out-of-scope" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>
@@ -717,7 +725,7 @@ export default function SkillPage() {
       <div className="divider" />
 
       {/* ── CRITICAL RULES ── */}
-      <section style={st.section}>
+      <section id="critical-rules" style={st.section}>
         <div className="content">
           <div className="two-col">
             <div style={st.colLabel}>

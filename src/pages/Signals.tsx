@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useHashNav } from '../hooks/useHashNav'
 
 /*
  * SIGNALS PAGE — Interactive decision flow
@@ -221,6 +222,7 @@ const initial: WalkthroughState = {
 }
 
 export default function Signals() {
+  useHashNav()
   const [state, setState] = useState<WalkthroughState>(initial)
 
   const activeScenario = scenarios.find(s => s.id === state.scenarioId) ?? null
@@ -264,7 +266,7 @@ export default function Signals() {
       </header>
 
       {/* ── INTERACTIVE WALKTHROUGH ── */}
-      <section style={styles.section}>
+      <section id="try-it" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -384,7 +386,7 @@ export default function Signals() {
       </section>
 
       {/* ── SIGNAL REFERENCE ── */}
-      <section style={{ ...styles.section, borderBottom: 'none' }}>
+      <section id="reference" style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>

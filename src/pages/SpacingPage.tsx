@@ -30,7 +30,10 @@ const densityExamples: DensityExample[] = [
   { label: 'Compact',   textSize: 13, lineHeight: 24, verticalPad: 8,  hPad: 16, gap: 16 },
 ]
 
+import { useHashNav } from '../hooks/useHashNav'
+
 export default function SpacingPage() {
+  useHashNav()
   return (
     <div>
       {/* ── PAGE HEADER ── */}
@@ -47,7 +50,7 @@ export default function SpacingPage() {
       </header>
 
       {/* ── BASELINE GRID ── */}
-      <section style={styles.section}>
+      <section id="baseline-grid" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -92,7 +95,7 @@ export default function SpacingPage() {
       </section>
 
       {/* ── GESTALT PROXIMITY ── */}
-      <section style={styles.section}>
+      <section id="gestalt-proximity" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -175,7 +178,7 @@ export default function SpacingPage() {
       </section>
 
       {/* ── GUTTERS ── */}
-      <section style={styles.section}>
+      <section id="gutters" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -229,7 +232,7 @@ export default function SpacingPage() {
       </section>
 
       {/* ── DENSITY LEVERS ── */}
-      <section style={{ ...styles.section, borderBottom: 'none' }}>
+      <section id="density-levers" style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>

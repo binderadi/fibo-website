@@ -37,7 +37,10 @@ const tools = [
   { name: 'Leo the Ladder',  shape: '≡', desc: 'Vertical stacking. Baseline grid and section gaps live here.' },
 ]
 
+import { useHashNav } from '../hooks/useHashNav'
+
 export default function System() {
+  useHashNav()
   return (
     <div>
       {/* ── PAGE HEADER ── */}
@@ -54,7 +57,7 @@ export default function System() {
       </header>
 
       {/* ── CORE RATIOS ── */}
-      <section style={styles.section}>
+      <section id="core-ratios" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -144,7 +147,7 @@ export default function System() {
       </section>
 
       {/* ── TWO LAYERS ── */}
-      <section style={styles.section}>
+      <section id="two-layers" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -203,7 +206,7 @@ export default function System() {
       </section>
 
       {/* ── TWO MODES ── */}
-      <section style={styles.section}>
+      <section id="two-modes" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -252,7 +255,7 @@ export default function System() {
       </section>
 
       {/* ── FIVE TOOLS ── */}
-      <section style={{ ...styles.section, borderBottom: 'none' }}>
+      <section id="five-tools" style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>

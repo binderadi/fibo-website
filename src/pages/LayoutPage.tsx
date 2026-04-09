@@ -63,7 +63,10 @@ const combinationRules = [
   { priority: 4, rule: 'Restructure layout entirely',         example: 'Switch to single column when columns can\'t fit content' },
 ]
 
+import { useHashNav } from '../hooks/useHashNav'
+
 export default function LayoutPage() {
+  useHashNav()
   return (
     <div>
       {/* ── PAGE HEADER ── */}
@@ -80,7 +83,7 @@ export default function LayoutPage() {
       </header>
 
       {/* ── CONTENT AREA RULER ── */}
-      <section style={styles.section}>
+      <section id="canvas-ruler" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -180,7 +183,7 @@ export default function LayoutPage() {
       </section>
 
       {/* ── SIX STEPS ── */}
-      <section style={styles.section}>
+      <section id="six-steps" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -224,7 +227,7 @@ export default function LayoutPage() {
       </section>
 
       {/* ── COMBINING SECTIONS ── */}
-      <section style={styles.section}>
+      <section id="combining-sections" style={styles.section}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
@@ -258,7 +261,7 @@ export default function LayoutPage() {
       </section>
 
       {/* ── RESTRUCTURING RULE ── */}
-      <section style={{ ...styles.section, borderBottom: 'none' }}>
+      <section id="restructuring-rule" style={{ ...styles.section, borderBottom: 'none' }}>
         <div className="content">
           <div className="two-col">
             <div style={styles.colLabel}>
