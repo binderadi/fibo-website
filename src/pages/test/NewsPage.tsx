@@ -112,7 +112,7 @@ const heroSlides = [
     author: 'Itamar Eichner & Lior Ben Ari',
     role: 'Ynetnews Correspondents',
     timestamp: '2 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg',
+    image: '/news-images/abraham-accords.jpg',
   },
   {
     category: 'News',
@@ -121,7 +121,7 @@ const heroSlides = [
     author: 'Elisha Ben Kimon',
     role: 'Military Correspondent, Ynetnews',
     timestamp: '3 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/F-16_June_2008.jpg',
+    image: '/news-images/f16.jpg',
   },
   {
     category: 'Mideast News',
@@ -130,7 +130,7 @@ const heroSlides = [
     author: 'Lior Ben Ari',
     role: 'Middle East Correspondent, Ynetnews',
     timestamp: '1 hour ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg',
+    image: '/news-images/dubai.jpg',
   },
   {
     category: 'Magazine',
@@ -139,7 +139,7 @@ const heroSlides = [
     author: 'Yael Feldman Shavit',
     role: 'Magazine Editor, Ynetnews',
     timestamp: '2 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/CourtGavel.JPG',
+    image: '/news-images/gavel.jpg',
   },
 ]
 
@@ -150,7 +150,7 @@ const secondaryStories = [
     excerpt: 'Iranian aide claims alleged violations in the ceasefire agreement; talks conditional on halting Hezbollah strikes.',
     author: 'Lior Ben Ari',
     timestamp: '3 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg/415px-Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg',
+    image: '/news-images/khamenei.jpg',
   },
   {
     category: 'Breaking News',
@@ -158,7 +158,7 @@ const secondaryStories = [
     excerpt: 'The Supreme Leader\'s son speaks publicly as diplomatic tension mounts over nuclear negotiations and proxy war activity across the region.',
     author: 'Lior Ben Ari',
     timestamp: '1 hour ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Seyyed_Ali_Khamenei_and_Seyyed_Hassan_Nasrallah_by_khamenei.ir_01%282005%29_02.jpg',
+    image: '/news-images/tyre-strike.jpg',
   },
   {
     category: 'Breaking News',
@@ -166,7 +166,7 @@ const secondaryStories = [
     excerpt: 'Lebanese Health Ministry reports 1,888 total deaths since early March; 303 killed in the latest Israeli military operation.',
     author: 'Lior Ben Ari',
     timestamp: '1 hour ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/%D8%A8%D9%8A%D8%B1%D9%88%D8%AA_%D8%A7%D9%84%D9%82%D8%B1%D9%86_19_%D8%A3%D8%B3%D9%88%D8%AF_%D8%A3%D8%A8%D9%8A%D8%B6.jpg',
+    image: '/news-images/beirut.jpg',
   },
 ]
 
@@ -177,7 +177,7 @@ const articles = [
     headline: 'Hezbollah fires some 60 rockets at northern Israel since morning',
     excerpt: 'Continued rocket barrages target communities across the Galilee as Home Front Command defensive policy remains active through tomorrow.',
     timestamp: '2 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/220px-IDF_Iron_Dome_2021.jpg',
+    image: '/news-images/iron-dome.jpg',
   },
   {
     id: 2,
@@ -185,7 +185,7 @@ const articles = [
     headline: 'Launches toward Nahariya intercepted; talks came at Trump\'s request — CNN',
     excerpt: 'Netanyahu\'s direct negotiations announcement reportedly initiated at US President Trump\'s direction, according to CNN sources.',
     timestamp: '2 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg/220px-President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg',
+    image: '/news-images/trump.jpg',
   },
   {
     id: 3,
@@ -193,7 +193,7 @@ const articles = [
     headline: 'Alert in the Galilee Panhandle as missiles target Mishgav Am',
     excerpt: 'Missile and rocket fire alert activated in Moshav Mishgav Am near the Lebanon border amid intensifying cross-border exchange.',
     timestamp: '3 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Gilboa_123PAN.jpg/220px-Gilboa_123PAN.jpg',
+    image: '/news-images/blue-line.jpg',
   },
   {
     id: 4,
@@ -201,7 +201,7 @@ const articles = [
     headline: 'Gal Hirsch to light torch alongside Ran Gvili\'s mother at Independence Day',
     excerpt: 'Hostages coordinator and fallen soldier\'s mother selected for the Independence Day torch lighting ceremony.',
     timestamp: '3 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/PikiWiki_Israel_1325_Israel_60th_independence_day_%D7%99%D7%95%D7%9D_%D7%94%D7%A2%D7%A6%D7%9E%D7%90%D7%95%D7%AA_%D7%94-60_%D7%9C%D7%9E%D7%93%D7%99%D7%A0%D7%AA_%D7%99%D7%A9%D7%A8%D7%90%D7%9C.jpg',
+    image: '/news-images/independence-day.jpg',
   },
   {
     id: 5,
@@ -209,7 +209,7 @@ const articles = [
     headline: 'Ayalon Expressway Fast Lanes project to open Sunday',
     excerpt: 'Highway 20 dedicated lane opening delayed by Iran war is now set for Sunday; features electric shuttles and 7,000-space parking.',
     timestamp: '3 hours ago',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/AyalonHW.jpg/220px-AyalonHW.jpg',
+    image: '/news-images/ayalon.jpg',
   },
 ]
 
@@ -239,26 +239,27 @@ const videos = [
   {
     title: 'Operation Eternal Darkness: What We Know So Far',
     duration: '4:12',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/200px-IDF_Iron_Dome_2021.jpg',
+    image: '/news-images/iron-dome.jpg',
   },
   {
     title: 'Inside the Israel-Lebanon Ceasefire Negotiations',
     duration: '5:48',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg/200px-President_Trump_and_The_First_Lady_Participate_in_an_Abraham_Accords_Signing_Ceremony_%28cropped%29.jpg',
+    image: '/news-images/abraham-accords.jpg',
+
   },
 ]
 
 const shortVideos = [
-  { title: 'What is Hezbollah?', duration: '1:02', views: '3.4M', image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Seyyed_Ali_Khamenei_and_Seyyed_Hassan_Nasrallah_by_khamenei.ir_01%282005%29_02.jpg' },
-  { title: 'The Lebanon Border Explained', duration: '0:58', views: '1.8M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Gilboa_123PAN.jpg/160px-Gilboa_123PAN.jpg' },
-  { title: 'Iran\'s Nuclear Program in 60 Seconds', duration: '1:05', views: '2.1M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg/160px-Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg' },
-  { title: 'UAE-Iran Relations: A Brief History', duration: '1:10', views: '892K', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg/160px-Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg' },
-  { title: 'Israel\'s Iron Dome System Explained', duration: '0:55', views: '4.2M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/160px-IDF_Iron_Dome_2021.jpg' },
-  { title: 'Northern Israel: Life Under Alert', duration: '1:18', views: '1.3M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Gilboa_123PAN.jpg/160px-Gilboa_123PAN.jpg' },
-  { title: 'Hezbollah Rocket Range Map', duration: '0:48', views: '2.7M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/160px-IDF_Iron_Dome_2021.jpg' },
-  { title: 'What is Operation Eternal Darkness?', duration: '1:00', views: '5.1M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/F-16_June_2008.jpg/160px-F-16_June_2008.jpg' },
-  { title: 'Gaza to Lebanon: Shifting IDF Focus', duration: '1:15', views: '938K', image: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Seyyed_Ali_Khamenei_and_Seyyed_Hassan_Nasrallah_by_khamenei.ir_01%282005%29_02.jpg' },
-  { title: 'Nahariya Under Fire: 60 Seconds', duration: '1:00', views: '1.1M', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/IDF_Iron_Dome_2021.jpg/160px-IDF_Iron_Dome_2021.jpg' },
+  { title: 'What is Hezbollah?', duration: '1:02', views: '3.4M', image: '/news-images/tyre-strike.jpg' },
+  { title: 'The Lebanon Border Explained', duration: '0:58', views: '1.8M', image: '/news-images/blue-line.jpg' },
+  { title: 'Iran\'s Nuclear Program in 60 Seconds', duration: '1:05', views: '2.1M', image: '/news-images/khamenei.jpg' },
+  { title: 'UAE-Iran Relations: A Brief History', duration: '1:10', views: '892K', image: '/news-images/dubai.jpg' },
+  { title: 'Israel\'s Iron Dome System Explained', duration: '0:55', views: '4.2M', image: '/news-images/iron-dome.jpg' },
+  { title: 'Northern Israel: Life Under Alert', duration: '1:18', views: '1.3M', image: '/news-images/blue-line.jpg' },
+  { title: 'Hezbollah Rocket Range Map', duration: '0:48', views: '2.7M', image: '/news-images/tyre-strike.jpg' },
+  { title: 'What is Operation Eternal Darkness?', duration: '1:00', views: '5.1M', image: '/news-images/f16.jpg' },
+  { title: 'Gaza to Lebanon: Shifting IDF Focus', duration: '1:15', views: '938K', image: '/news-images/oct7-fires.jpg' },
+  { title: 'Nahariya Under Fire: 60 Seconds', duration: '1:00', views: '1.1M', image: '/news-images/iron-dome.jpg' },
 ]
 
 const opinions = [
@@ -436,6 +437,7 @@ export default function NewsPage() {
               src={hero.image}
               alt={hero.headline}
               style={{ ...s.heroImgEl, animation: 'heroFade 0.6s ease' }}
+              referrerPolicy="no-referrer"
             />
             <div style={s.heroGradient} />
             <div style={s.heroText}>
@@ -480,7 +482,7 @@ export default function NewsPage() {
               <article key={i} style={s.secondaryCard}>
                 {/* Image — 415×174px (42% ratio) */}
                 <div style={s.secondaryImgWrap}>
-                  <img src={story.image} alt={story.headline} style={s.secondaryImg} />
+                  <img src={story.image} alt={story.headline} style={s.secondaryImg} referrerPolicy="no-referrer" />
                 </div>
                 <div style={s.secondaryBody}>
                   {/* Category tag — 32px height */}
@@ -525,6 +527,7 @@ export default function NewsPage() {
                       src={article.image}
                       alt={article.headline}
                       style={s.articleThumb}
+                      referrerPolicy="no-referrer"
                     />
                     <div style={s.articleBody}>
                       <span style={{ ...s.catTagSmall, color: CAT_COLORS[article.category], borderColor: CAT_COLORS[article.category] }}>
@@ -573,7 +576,7 @@ export default function NewsPage() {
                   {videos.map((v, i) => (
                     <div key={i} style={s.videoCard}>
                       <div style={s.videoThumbWrap}>
-                        <img src={v.image} alt={v.title} style={s.videoThumb} />
+                        <img src={v.image} alt={v.title} style={s.videoThumb} referrerPolicy="no-referrer" />
                         <span style={s.videoDuration}>{v.duration}</span>
                         <div style={s.videoPlay}>▶</div>
                       </div>
@@ -600,7 +603,7 @@ export default function NewsPage() {
             {shortVideos.map((v, i) => (
               <div key={i} style={s.shortVideoCard}>
                 <div style={s.shortVideoThumbWrap}>
-                  <img src={v.image} alt={v.title} style={s.shortVideoThumb} />
+                  <img src={v.image} alt={v.title} style={s.shortVideoThumb} referrerPolicy="no-referrer" />
                   <span style={s.shortVideoDuration}>{v.duration}</span>
                   <div style={s.shortVideoPlay}>▶</div>
                 </div>
@@ -625,7 +628,7 @@ export default function NewsPage() {
               <article key={i} style={s.opinionCard}>
                 {/* Author — 11px / 16px lh. Photo: 48×48px (Cesar Circles, Signal 1) */}
                 <div style={s.opinionAuthorRow}>
-                  <img src={op.image} alt={op.author} style={s.authorPhoto} />
+                  <img src={op.image} alt={op.author} style={s.authorPhoto} referrerPolicy="no-referrer" />
                   <div style={s.authorMeta}>
                     <div style={s.authorName}>{op.author}</div>
                     <div style={s.authorRole}>{op.role}</div>
