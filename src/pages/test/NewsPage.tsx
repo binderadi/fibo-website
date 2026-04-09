@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom'
  * Content area:   1470 − (2×88) = 1294px
  *
  * Two-column content grid (gutter mechanic: subtract first)
- *   Post-gutter:  1294 − 24 = 1270px
- *   Main (F4+F5): 1270 × 68% = 863.6 → 864px
- *   Sidebar:      1270 × 32% = 406.4 → 406px
- *   Check:        864 + 24 + 406 = 1294 ✓
+ *   Post-gutter:  1294 − 48 = 1246px
+ *   Main (F4+F5): 1246 × 68% = 847.3 → 847px
+ *   Sidebar:      1246 × 32% = 398.7 → 399px
+ *   Check:        847 + 48 + 399 = 1294 ✓
  *
  * 3-column secondary stories (equal-width repeating)
  *   Post-gutter:  1294 − (2×24) = 1246px
@@ -25,8 +25,8 @@ import { Link } from 'react-router-dom'
  *   Height: 1294 × 42% = 543.5 → 543px
  *
  * Article list thumbnail (F4 of main col, Outside-In)
- *   Width:  864 × 26% = 224.6 → 225px
- *   Height: 225 × 42% = 94.5 → 95px
+ *   Width:  847 × 26% = 220.2 → 220px
+ *   Height: 220 × 42% = 92.4 → 92px
  *
  * Opinion columns (3-equal, same as secondary stories)
  *   Each: 415px
@@ -60,7 +60,7 @@ import { Link } from 'react-router-dom'
  * ─── PADDING (FIBO of parent width) ─────────────────────────────
  * Card padding:   F1 of card width (6%)
  *   415px card → 415 × 6% = 24.9 → 24px
- *   406px sidebar → 406 × 6% = 24.4 → 24px   (same — consistent ✓)
+ *   399px sidebar content → 351px after 48px left padding; 351 × 6% ≈ 21px (using 24px — consistent)
  * Section v-pad:  96px top + bottom (12×8, major section gap)
  *
  * ─── COLORS (outside FIBO scope — design intent) ─────────────────
@@ -175,7 +175,7 @@ const articles = [
     headline: 'Scientists Detect Unusual Seismic Signals Beneath Antarctic Ice Sheet',
     excerpt: 'Geophysicists monitoring the Ross Ice Shelf have recorded a series of tremors inconsistent with known glacial dynamics, raising questions about subglacial volcanic activity.',
     timestamp: '3 hours ago',
-    image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=225&h=95&fit=crop',
+    image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=220&h=92&fit=crop',
   },
   {
     id: 2,
@@ -183,7 +183,7 @@ const articles = [
     headline: 'New Study Links Long-Term Microplastic Exposure to Cardiovascular Disease in Under-40s',
     excerpt: 'A 12-year longitudinal study tracking 48,000 participants has found a statistically significant correlation between blood microplastic concentration and early-onset arterial inflammation.',
     timestamp: '5 hours ago',
-    image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=225&h=95&fit=crop',
+    image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=220&h=92&fit=crop',
   },
   {
     id: 3,
@@ -191,7 +191,7 @@ const articles = [
     headline: 'OPEC+ Cuts Production as Gulf States Pivot Toward Renewable Export Strategy',
     excerpt: 'Saudi Arabia and the UAE announced coordinated reductions in crude output, citing a long-term strategic shift toward hydrogen and solar exports as global demand projections narrow.',
     timestamp: '7 hours ago',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=225&h=95&fit=crop',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=220&h=92&fit=crop',
   },
   {
     id: 4,
@@ -199,7 +199,7 @@ const articles = [
     headline: 'India Surpasses China as World\'s Largest Steel Producer for Third Consecutive Quarter',
     excerpt: 'India\'s steel output reached 38 million tonnes in Q2, outpacing China for the third straight quarter as infrastructure spending accelerates and Chinese domestic demand softens.',
     timestamp: 'Yesterday',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=225&h=95&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=220&h=92&fit=crop',
   },
   {
     id: 5,
@@ -207,7 +207,7 @@ const articles = [
     headline: 'Presidential Commission Releases 600-Page Report on Electoral System Vulnerabilities',
     excerpt: 'The bipartisan report, three years in the making, identifies critical gaps in voter registration infrastructure, ballot chain-of-custody protocols, and foreign interference detection.',
     timestamp: 'Yesterday',
-    image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=225&h=95&fit=crop',
+    image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=220&h=92&fit=crop',
   },
 ]
 
@@ -306,16 +306,16 @@ function FiboPanel({ onClose }: { onClose: () => void }) {
     { label: '─ F4 (26%)',          value: '336px' },
     { label: '─ F5 (42%)',          value: '543px' },
     { label: '─────',               value: '' },
-    { label: 'Gutter',              value: '24px  (3×8)' },
-    { label: 'Post-gutter (2-col)', value: '1270px' },
-    { label: 'Main column',         value: '864px  (F4+F5 of 1270)' },
-    { label: 'Sidebar',             value: '406px  (F1+F2+F3 of 1270)' },
+    { label: 'Gutter',              value: '48px  (6×8)' },
+    { label: 'Post-gutter (2-col)', value: '1246px' },
+    { label: 'Main column',         value: '847px  (F4+F5 of 1246)' },
+    { label: 'Sidebar',             value: '399px  (F1+F2+F3 of 1246)' },
     { label: '─────',               value: '' },
     { label: 'Secondary card',      value: '415px  ((1294−48)÷3)' },
     { label: 'Card image height',   value: '174px  (415 × 42%)' },
     { label: 'Hero image height',   value: '543px  (1294 × 42%)' },
-    { label: 'Article thumb w',     value: '225px  (864 × 26%)' },
-    { label: 'Article thumb h',     value: '95px   (225 × 42%)' },
+    { label: 'Article thumb w',     value: '220px  (847 × 26%)' },
+    { label: 'Article thumb h',     value: '92px   (220 × 42%)' },
     { label: 'Footer col',          value: '306px  ((1294−72)÷4)' },
     { label: '─────',               value: '' },
     { label: 'Top bar height',      value: '40px   (24lh + 8+8 pad)' },
@@ -487,12 +487,12 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* ── CONTENT GRID (main 864px + sidebar 406px) ───────────── */}
+      {/* ── CONTENT GRID (main 847px + sidebar 399px) ───────────── */}
       <section style={s.gridSection}>
         <div style={s.contentArea}>
           <div style={s.contentGrid}>
 
-            {/* MAIN COLUMN — 864px */}
+            {/* MAIN COLUMN — 847px */}
             <div style={s.mainCol}>
               {/* Section header — 11px / 16px lh, uppercase */}
               <div style={s.sectionHeader}>
@@ -500,7 +500,7 @@ export default function NewsPage() {
                 <div style={s.sectionLine} />
               </div>
 
-              {/* Article list — thumbnail 225×95px (F4 of 864 = 225, 42% height) */}
+              {/* Article list — thumbnail 220×92px (F4 of 847 = 220, 42% height) */}
               <div style={s.articleList}>
                 {articles.map((article) => (
                   <article key={article.id} style={s.articleCard}>
@@ -525,7 +525,7 @@ export default function NewsPage() {
               </div>
             </div>
 
-            {/* SIDEBAR — 406px */}
+            {/* SIDEBAR — 399px */}
             <aside style={s.sidebar}>
 
               {/* Trending Now */}
@@ -802,7 +802,7 @@ const s: Record<string, React.CSSProperties> = {
     fontWeight: 700,
     color: '#FFFFFF',
     letterSpacing: '-0.01em',
-    maxWidth: '864px',            /* Main column width — constrains readability */
+    maxWidth: '847px',            /* Main column width — constrains readability */
   },
   heroExcerpt: {
     fontSize: '16px',             /* 16px / 24px lh */
@@ -925,8 +925,8 @@ const s: Record<string, React.CSSProperties> = {
   },
   contentGrid: {
     display: 'grid',
-    gridTemplateColumns: '864px 406px', /* main + sidebar, gutter via gap */
-    gap: '24px',                         /* gutter */
+    gridTemplateColumns: '847px 399px', /* main + sidebar, gutter via gap */
+    gap: '48px',                         /* gutter */
     alignItems: 'start',
   },
   mainCol: {
@@ -961,15 +961,15 @@ const s: Record<string, React.CSSProperties> = {
   },
   articleCard: {
     display: 'grid',
-    gridTemplateColumns: '225px 1fr', /* thumbnail F4 of 864 = 225px, gap via column-gap */
+    gridTemplateColumns: '220px 1fr', /* thumbnail F4 of 847 = 220px, gap via column-gap */
     columnGap: '24px',               /* gutter between thumb and text */
     padding: '24px 0',               /* 24px v-pad */
     borderBottom: `1px solid ${C.border}`,
     alignItems: 'start',
   },
   articleThumb: {
-    width: '225px',
-    height: '95px',               /* 225 × 42% = 94.5 → 95px */
+    width: '220px',
+    height: '92px',               /* 220 × 42% = 92.4 → 92px */
     objectFit: 'cover',
     display: 'block',
     borderRadius: '8px',
@@ -1002,6 +1002,8 @@ const s: Record<string, React.CSSProperties> = {
     display: 'flex',
     flexDirection: 'column',
     gap: '48px',                  /* 48px — between sidebar widgets */
+    borderLeft: `1px solid ${C.border}`,
+    paddingLeft: '48px',
   },
   sideWidget: {
     display: 'flex',
@@ -1052,11 +1054,11 @@ const s: Record<string, React.CSSProperties> = {
   videoThumbWrap: {
     position: 'relative',
     width: '100%',
-    /* Sidebar 406px. Video thumbs: full width of sidebar.
-     * Height: 406px × 42% = 170.5 → 171px. Using ~56% for video (16:9 aspect): 406 × 56% = 227px. Too tall.
-     * Signal: media height = FIBO ratio of width. Use 42%: 406×42% = 170.5 → 171px. Rounded to 172 (×8 near). No — 171 is fine (image, not component).
+    /* Sidebar content width: 399px − 48px padding = 351px.
+     * Video thumbs: full width of sidebar content.
+     * Height: 351 × 42% = 147.4 → 147px.
      */
-    height: '171px',
+    height: '147px',
     overflow: 'hidden',
     borderRadius: '8px',
   },
