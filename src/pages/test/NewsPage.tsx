@@ -853,7 +853,6 @@ const s: Record<string, React.CSSProperties> = {
   secondarySection: {
     paddingTop: '48px',           /* 48px — section gap (6×8) */
     paddingBottom: '48px',
-    borderBottom: `1px solid ${C.border}`,
   },
   contentArea: {
     maxWidth: '1470px',           /* canvas width — padding 88px each side → 1294px content ✓ */
