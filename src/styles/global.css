@@ -171,4 +171,7 @@ body {
   .kanban-scroll > div {
     min-width: 640px;
   }
+  .combination-row {
+    grid-template-columns: 1fr !important;
+  }
 }

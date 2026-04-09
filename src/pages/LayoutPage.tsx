@@ -157,7 +157,7 @@ export default function LayoutPage() {
                     { name: 'Full width', combo: 'F1+F2+F3+F4+F5', px: '1294px', rest: '= content area', usage: 'Tables, rulers, hero sections' },
                     { name: 'Half-half', combo: 'F1+F2+F3 / F4+F5 of 1270px', px: '406px / 863px', rest: '+ 24px gutter = 1293px ✓', usage: 'Two-panel sections' },
                   ].map((c) => (
-                    <div key={c.name} style={styles.combinationRow}>
+                    <div key={c.name} className="combination-row" style={styles.combinationRow}>
                       <div style={styles.combinationName}>{c.name}</div>
                       <div style={styles.combinationDetail}>
                         <span className="mono chip">{c.combo}</span>

@@ -116,9 +116,9 @@ export default function SpacingPage() {
                   { label: 'Group-to-group gap (within section)', value: '48–64px', level: 3, color: 'var(--c-f4)' },
                   { label: 'Section-to-section gap',          value: '96px',    level: 4, color: 'var(--c-f5)' },
                 ].map((row) => (
-                  <div key={row.label} style={{
+                  <div key={row.label} className="proximity-row" style={{
                     ...styles.proximityRow,
-                    paddingLeft: `calc(${row.level} * var(--sp24) + var(--sp24))`,
+                    paddingLeft: `calc(${Math.min(row.level, 2)} * var(--sp16) + var(--sp16))`,
                     borderLeft: `3px solid ${row.color}`,
                   }}>
                     <span style={styles.proximityLabel}>{row.label}</span>
@@ -401,6 +401,7 @@ const styles: Record<string, React.CSSProperties> = {
     background: 'var(--c-surface)',
     display: 'flex',
     alignItems: 'center',
+    overflow: 'hidden',
   },
 
   proximityDiagram: {

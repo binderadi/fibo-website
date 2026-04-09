@@ -384,7 +384,7 @@ const styles: Record<string, React.CSSProperties> = {
     letterSpacing: '0.06em',
   },
   waterfallSample: {
-    padding: '0 var(--sp24) 0 0',
+    padding: '0 var(--sp24)',
     color: 'var(--c-text)',
     wordBreak: 'break-word',
   },
