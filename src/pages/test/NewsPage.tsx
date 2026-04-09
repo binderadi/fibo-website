@@ -170,7 +170,7 @@ const articles = [
   {
     id: 1,
     category: 'Science',
-    headline: 'Scientists Detect Unusual Seismic Signals Beneath Antarctic Ice Sheet',
+    headline: 'Scientists Detect Seismic Anomalies Under Antarctica',
     excerpt: 'Geophysicists monitoring the Ross Ice Shelf have recorded a series of tremors inconsistent with known glacial dynamics, raising questions about subglacial volcanic activity.',
     timestamp: '3 hours ago',
     image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=220&h=92&fit=crop',
@@ -178,7 +178,7 @@ const articles = [
   {
     id: 2,
     category: 'Health',
-    headline: 'New Study Links Long-Term Microplastic Exposure to Cardiovascular Disease in Under-40s',
+    headline: 'Microplastics Linked to Heart Disease in Under-40s',
     excerpt: 'A 12-year longitudinal study tracking 48,000 participants has found a statistically significant correlation between blood microplastic concentration and early-onset arterial inflammation.',
     timestamp: '5 hours ago',
     image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=220&h=92&fit=crop',
@@ -186,7 +186,7 @@ const articles = [
   {
     id: 3,
     category: 'Business',
-    headline: 'OPEC+ Cuts Production as Gulf States Pivot Toward Renewable Export Strategy',
+    headline: 'OPEC+ Cuts Output as Gulf States Pivot to Renewables',
     excerpt: 'Saudi Arabia and the UAE announced coordinated reductions in crude output, citing a long-term strategic shift toward hydrogen and solar exports as global demand projections narrow.',
     timestamp: '7 hours ago',
     image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=220&h=92&fit=crop',
@@ -194,7 +194,7 @@ const articles = [
   {
     id: 4,
     category: 'World',
-    headline: 'India Surpasses China as World\'s Largest Steel Producer for Third Consecutive Quarter',
+    headline: 'India Overtakes China as World\'s Top Steel Producer',
     excerpt: 'India\'s steel output reached 38 million tonnes in Q2, outpacing China for the third straight quarter as infrastructure spending accelerates and Chinese domestic demand softens.',
     timestamp: 'Yesterday',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=220&h=92&fit=crop',
@@ -202,7 +202,7 @@ const articles = [
   {
     id: 5,
     category: 'Politics',
-    headline: 'Presidential Commission Releases 600-Page Report on Electoral System Vulnerabilities',
+    headline: 'Commission Flags Critical US Electoral Vulnerabilities',
     excerpt: 'The bipartisan report, three years in the making, identifies critical gaps in voter registration infrastructure, ballot chain-of-custody protocols, and foreign interference detection.',
     timestamp: 'Yesterday',
     image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=220&h=92&fit=crop',
@@ -976,6 +976,7 @@ const s: Record<string, React.CSSProperties> = {
     display: 'flex',
     flexDirection: 'column',
     gap: '8px',
+    paddingRight: '48px',         /* 48px — 2× gutter, breathing room before sidebar */
   },
   articleHeadline: {
     fontSize: '18px',             /* 18px / 24px lh */
