@@ -37,6 +37,7 @@ const testLinks = [
   { to: '/test/tracker',      label: 'Project Tracker'   },
   { to: '/test/observatory',  label: 'Observatory'       },
   { to: '/test/roam',         label: 'Roam'              },
+  { to: '/test/hollow-wire',  label: 'The Hollow Wire'   },
 ]
 
 export default function Nav() {
