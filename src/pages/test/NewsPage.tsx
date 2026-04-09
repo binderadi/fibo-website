@@ -1053,11 +1053,11 @@ const s: Record<string, React.CSSProperties> = {
   videoThumbWrap: {
     position: 'relative',
     width: '100%',
-    /* Sidebar content width: 399px − 48px padding = 351px.
+    /* Sidebar content width: 415px − 24px padding = 391px.
      * Video thumbs: full width of sidebar content.
-     * Height: 351 × 42% = 147.4 → 147px.
+     * Height: 391 × 9/16 = 219.9 → 220px (16:9).
      */
-    height: '147px',
+    height: '220px',
     overflow: 'hidden',
     borderRadius: '8px',
   },
