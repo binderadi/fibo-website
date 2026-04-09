@@ -1,0 +1,117 @@
+@import './tokens.css';
+
+/* ─────────────────────────────────────────
+ * RESET
+ * ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─────────────────────────────────────────
+ * BASE
+ * ───────────────────────────────────────── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: var(--t16);
+  line-height: var(--lh16);
+  color: var(--c-text);
+  background: var(--c-bg);
+  min-height: 100vh;
+}
+
+/* ─────────────────────────────────────────
+ * LAYOUT PRIMITIVES
+ * ───────────────────────────────────────── */
+
+/* Full-width wrapper — used for nav, footer, full-bleed sections */
+.full-width {
+  width: 100%;
+}
+
+/* Content-width container — max-width 1294px, centered */
+/* Equivalent to canvas (1470px) with 88px margins each side */
+.content {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 var(--margin);
+}
+
+/* ─────────────────────────────────────────
+ * TYPOGRAPHY UTILITIES
+ * ───────────────────────────────────────── */
+.t8  { font-size: var(--t8);  line-height: var(--lh8);  }
+.t9  { font-size: var(--t9);  line-height: var(--lh9);  }
+.t10 { font-size: var(--t10); line-height: var(--lh10); }
+.t11 { font-size: var(--t11); line-height: var(--lh11); }
+.t13 { font-size: var(--t13); line-height: var(--lh13); }
+.t16 { font-size: var(--t16); line-height: var(--lh16); }
+.t18 { font-size: var(--t18); line-height: var(--lh18); }
+.t21 { font-size: var(--t21); line-height: var(--lh21); }
+.t34 { font-size: var(--t34); line-height: var(--lh34); }
+.t55 { font-size: var(--t55); line-height: var(--lh55); }
+
+.mono {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+.c-text    { color: var(--c-text); }
+.c-muted   { color: var(--c-muted); }
+.c-faint   { color: var(--c-faint); }
+.c-accent  { color: var(--c-accent); }
+
+/* ─────────────────────────────────────────
+ * COMPONENT PRIMITIVES
+ * ───────────────────────────────────────── */
+
+/* Value chip — shows a FIBO calculated value */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;         /* 3×8 */
+  padding: 0 var(--sp8);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--t10);
+  line-height: var(--lh10);
+  font-weight: 500;
+  background: var(--c-accent-bg);
+  color: var(--c-accent);
+  border-radius: 2px;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--c-border);
+}
+
+/* Label */
+.label {
+  font-size: var(--t11);
+  line-height: var(--lh11);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+/* ─────────────────────────────────────────
+ * SCROLLBAR
+ * ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--c-surface); }
+::-webkit-scrollbar-thumb { background: var(--c-border-2); border-radius: 0; }

@@ -1,0 +1,1366 @@
+{
+  "project": {
+    "name": "Thornfield Manor",
+    "description": "Luxury boutique hotel website — 12 rooms, restaurant, spa, private gardens. Cotswolds, England. Tone: refined and understated, English country house elegance.",
+    "date": "2026-04-08",
+    "designer": "fibo-designer"
+  },
+
+  "canvas": {
+    "width": 1470,
+    "height": 956,
+    "marginPercent": 16,
+    "marginPx": 235,
+    "contentArea": 1000,
+    "reference": "MacBook Air M4 — 16% margin chosen for editorial/luxury intent per layout.md guidance. 1470 − (2 × 235) = 1000px content area.",
+    "fiboSectionsOfContentArea": {
+      "F1_6pct": 60,
+      "F2_10pct": 100,
+      "F3_16pct": 160,
+      "F4_26pct": 260,
+      "F5_42pct": 420,
+      "math": "1000 × 0.06 = 60, ×0.10 = 100, ×0.16 = 160, ×0.26 = 260, ×0.42 = 420"
+    }
+  },
+
+  "color": {
+    "primaryHue": 38,
+    "saturation": 18,
+    "mood": "refined, understated, warm stone — quiet luxury",
+    "rationale": "Hue 38° = warm sand/stone, evoking Cotswolds limestone. Saturation 18% = low, preventing garish warmth. All vitality comes from texture and proportion, not colour intensity.",
+    "companions": {
+      "near": {
+        "hue": 60,
+        "angle": 22,
+        "role": "warm gold — decorative rule lines, hover accents"
+      },
+      "sage": {
+        "hue": 132,
+        "angle": 94,
+        "role": "muted sage green — primary interactive colour, accent, CTA"
+      },
+      "steel": {
+        "hue": 189,
+        "angle": 151,
+        "role": "muted steel — deep dark sections, footer, hero overlay"
+      }
+    },
+    "shades": [0, 6, 10, 16, 26, 42, 58, 74, 84, 90, 94, 100],
+    "proportion": {
+      "dominant": {
+        "percent": 42,
+        "usage": "backgrounds, white space, page canvas",
+        "shade": 97,
+        "note": "Using effective near-white 97 for primary background; closest bracketed shade is 94. The cream warmth of shade 94 is used for secondary surfaces."
+      },
+      "secondary": {
+        "percent": 26,
+        "usage": "surfaces, cards, alternating section backgrounds",
+        "shade": 94
+      },
+      "structural": {
+        "percent": 16,
+        "usage": "body text, borders, dividers, dark UI elements",
+        "shade": 10
+      },
+      "primary": {
+        "percent": 10,
+        "usage": "interactive elements, sage green brand colour",
+        "shade": 42
+      },
+      "accent": {
+        "percent": 6,
+        "usage": "CTAs, key highlight lines, focus states",
+        "shade": 42
+      }
+    },
+    "primitives": {
+      "stone-0":   "hsl(38, 18%, 0%)",
+      "stone-6":   "hsl(38, 18%, 6%)",
+      "stone-10":  "hsl(38, 18%, 10%)",
+      "stone-16":  "hsl(38, 18%, 16%)",
+      "stone-26":  "hsl(38, 18%, 26%)",
+      "stone-42":  "hsl(38, 18%, 42%)",
+      "stone-58":  "hsl(38, 18%, 58%)",
+      "stone-74":  "hsl(38, 18%, 74%)",
+      "stone-84":  "hsl(38, 18%, 84%)",
+      "stone-90":  "hsl(38, 18%, 90%)",
+      "stone-94":  "hsl(38, 18%, 94%)",
+      "stone-97":  "hsl(38, 18%, 97%)",
+      "sage-10":   "hsl(132, 16%, 10%)",
+      "sage-26":   "hsl(132, 16%, 26%)",
+      "sage-42":   "hsl(132, 16%, 42%)",
+      "sage-58":   "hsl(132, 16%, 58%)",
+      "sage-84":   "hsl(132, 16%, 84%)",
+      "sage-90":   "hsl(132, 16%, 90%)",
+      "steel-6":   "hsl(189, 12%, 6%)",
+      "steel-10":  "hsl(189, 12%, 10%)",
+      "steel-16":  "hsl(189, 12%, 16%)",
+      "steel-84":  "hsl(189, 12%, 84%)",
+      "steel-94":  "hsl(189, 12%, 94%)",
+      "gold-58":   "hsl(60, 26%, 58%)",
+      "gold-74":   "hsl(60, 26%, 74%)",
+      "white":     "hsl(38, 10%, 99%)",
+      "pure-white":"hsl(0, 0%, 100%)"
+    },
+    "roles": {
+      "bg-primary":      "hsl(38, 18%, 97%)",
+      "bg-secondary":    "hsl(38, 18%, 94%)",
+      "bg-tertiary":     "hsl(38, 18%, 90%)",
+      "bg-dark":         "hsl(189, 12%, 10%)",
+      "bg-dark-deep":    "hsl(189, 12%, 6%)",
+      "text-primary":    "hsl(38, 18%, 10%)",
+      "text-secondary":  "hsl(38, 12%, 42%)",
+      "text-tertiary":   "hsl(38, 10%, 58%)",
+      "text-on-dark":    "hsl(38, 18%, 90%)",
+      "text-on-dark-secondary": "hsl(38, 10%, 58%)",
+      "accent":          "hsl(132, 16%, 42%)",
+      "accent-dark":     "hsl(132, 16%, 26%)",
+      "accent-light":    "hsl(132, 16%, 90%)",
+      "accent-hover":    "hsl(132, 16%, 36%)",
+      "gold-rule":       "hsl(60, 26%, 74%)",
+      "border":          "hsl(38, 12%, 84%)",
+      "border-subtle":   "hsl(38, 10%, 90%)",
+      "border-on-dark":  "hsl(38, 10%, 26%)",
+      "error":           "hsl(0, 50%, 42%)",
+      "success":         "hsl(132, 16%, 42%)"
+    },
+    "opacity": {
+      "overlay-light":   0.16,
+      "overlay-medium":  0.42,
+      "overlay-heavy":   0.74,
+      "hero-overlay":    0.42,
+      "disabled":        0.42,
+      "hover-bg":        0.06,
+      "border-subtle":   0.10,
+      "image-scrim":     0.58
+    }
+  },
+
+  "typography": {
+    "displayTypeface": "Cormorant Garamond",
+    "bodyTypeface": "EB Garamond",
+    "displayFallback": "Georgia, 'Times New Roman', serif",
+    "bodyFallback": "Georgia, 'Times New Roman', serif",
+    "rationale": "Both faces are Old-style serifs evoking English printing tradition. Cormorant Garamond has extreme contrast and elegance for headlines; EB Garamond has warmer, more bookish body texture. Neither face should be substituted with a sans-serif — the serif character is essential to the tone.",
+    "roles": {
+      "hero": {
+        "size": 55,
+        "lineHeight": 64,
+        "weight": 300,
+        "face": "Cormorant Garamond",
+        "tracking": "0.02em",
+        "usage": "Hero section main headline only. Light weight prevents heaviness against photographic backgrounds."
+      },
+      "heading": {
+        "size": 34,
+        "lineHeight": 40,
+        "weight": 400,
+        "face": "Cormorant Garamond",
+        "tracking": "0.01em",
+        "usage": "Page section headings: Rooms, Restaurant, Spa, Location, Testimonials."
+      },
+      "section": {
+        "size": 21,
+        "lineHeight": 32,
+        "weight": 400,
+        "face": "Cormorant Garamond",
+        "tracking": "0.01em",
+        "usage": "Sub-section headings, room names in detail view, menu section titles."
+      },
+      "subheading": {
+        "size": 18,
+        "lineHeight": 32,
+        "weight": 400,
+        "face": "Cormorant Garamond",
+        "tracking": "0em",
+        "usage": "Room card names, restaurant dish names, spa treatment names."
+      },
+      "price": {
+        "size": 21,
+        "lineHeight": 32,
+        "weight": 300,
+        "face": "Cormorant Garamond",
+        "tracking": "0em",
+        "fontVariant": "tabular-nums",
+        "usage": "Room pricing, menu item prices. Light weight keeps price secondary to experience copy."
+      },
+      "body": {
+        "size": 16,
+        "lineHeight": 24,
+        "weight": 400,
+        "face": "EB Garamond",
+        "tracking": "0em",
+        "usage": "All body copy paragraphs. Room descriptions, restaurant copy, spa copy, hero subheadline."
+      },
+      "body-small": {
+        "size": 13,
+        "lineHeight": 24,
+        "weight": 400,
+        "face": "EB Garamond",
+        "tracking": "0em",
+        "usage": "Secondary descriptions, nav link text, footer paragraph text, card supplementary copy."
+      },
+      "label": {
+        "size": 11,
+        "lineHeight": 16,
+        "weight": 500,
+        "face": "Cormorant Garamond",
+        "tracking": "0.12em",
+        "textTransform": "uppercase",
+        "usage": "Category labels (ROOMS, SPA, DINING), room amenity pills, form field labels, nav eyebrows."
+      },
+      "caption": {
+        "size": 10,
+        "lineHeight": 16,
+        "weight": 400,
+        "face": "EB Garamond",
+        "tracking": "0.04em",
+        "usage": "Image captions, footnotes, copyright, fine print."
+      }
+    },
+    "scaleUsed": [10, 11, 13, 16, 18, 21, 34, 55],
+    "notes": "Using 9 sizes from scale. 11 chosen over 12 — Cormorant Garamond's fine strokes render clearly at 11px on Retina. Gaps in scale: 10 fills 8–13 gap; 18 fills 16–21 gap per gap-fill rule (16 + F2 of 16-ruler = 16 + 2 = 18 — confirmed valid). Price role shares 21px with section role but differs in weight and variant."
+  },
+
+  "spacing": {
+    "baselineGrid": 8,
+    "gutter": 40,
+    "gutterRationale": "40px gutter chosen so card padding (32px) < gutter (40px) — satisfying Gestalt proximity rule. 40 = 5×8, on grid.",
+    "roles": {
+      "section-to-section": 128,
+      "group-to-group": 64,
+      "item-to-item": 32,
+      "tight-item": 16,
+      "label-to-field": 8,
+      "card-padding": 32,
+      "card-padding-tight": 24,
+      "sidebar-padding": 24,
+      "page-header-top": 96,
+      "page-header-bottom": 64,
+      "hero-text-padding-v": 80,
+      "section-label-to-heading": 16,
+      "heading-to-body": 24,
+      "body-to-cta": 40
+    },
+    "allValuesOnGrid": "128=16×8, 96=12×8, 80=10×8, 64=8×8, 40=5×8, 32=4×8, 24=3×8, 16=2×8, 8=1×8 — all confirmed multiples of 8.",
+    "gestaltCheck": "card-padding (32) < gutter (40) ✓ | item-to-item (32) < group-to-group (64) ✓ | group-to-group (64) < section-to-section (128) ✓ | label-to-field (8) < item-to-item (32) ✓"
+  },
+
+  "layout": {
+    "type": "marketing — full-page scrolling sections",
+    "margin": 235,
+    "gutter": 40,
+    "contentArea": 1000,
+
+    "columnCalculations": {
+      "twoCol_F5_F4": {
+        "math": "1000 − 40 (gutter) = 960. F5 = 960 × 21/34 = 592.94 → 593px. F4 = 960 × 13/34 = 367.06 → 367px. Check: 593 + 367 + 40 = 1000 ✓",
+        "F5": 593,
+        "F4": 367
+      },
+      "threeEqual": {
+        "math": "1000 − (2 × 40) = 920. 920 ÷ 3 = 306.67. Use 307 + 307 + 306 = 920. Check: 920 + 80 = 1000 ✓",
+        "col1": 307,
+        "col2": 307,
+        "col3": 306
+      },
+      "fourEqual": {
+        "math": "1000 − (3 × 40) = 880. 880 ÷ 4 = 220. Check: 220 × 4 + 120 = 1000 ✓",
+        "each": 220
+      },
+      "twoEqualHalf": {
+        "math": "1000 − 40 = 960. 960 ÷ 2 = 480 each. Check: 480 + 480 + 40 = 1000 ✓",
+        "each": 480
+      }
+    },
+
+    "sections": [
+      {
+        "name": "nav",
+        "order": 1,
+        "type": "persistent — spans full canvas",
+        "theme": "light",
+        "bgColor": "bg-primary",
+        "width": 1470,
+        "innerContentWidth": 1000,
+        "height": 72,
+        "heightMath": "Inside-Out: nav link font 13px, lineHeight 24px. Padding top + bottom: 24px each. Height = 24 + 24 + 24 = 72px. On 8px grid ✓",
+        "columns": "two-zone: logo left, nav links + CTA right",
+        "logoZone": {
+          "width": 200,
+          "alignment": "left",
+          "content": "THORNFIELD MANOR logotype",
+          "fontSize": "label (11px / 16px)",
+          "tracking": "0.2em",
+          "textTransform": "uppercase",
+          "weight": 500
+        },
+        "linksZone": {
+          "width": 800,
+          "alignment": "right",
+          "items": ["Rooms", "Dining", "Spa", "Grounds", "About", "Enquire"],
+          "fontSize": "body-small (13px / 24px)",
+          "itemPaddingH": 16,
+          "ctaButton": {
+            "text": "Book a Stay",
+            "height": 40,
+            "paddingH": 24,
+            "radius": 0,
+            "background": "text-primary",
+            "color": "bg-primary",
+            "fontRole": "label",
+            "tracking": "0.1em",
+            "textTransform": "uppercase"
+          }
+        },
+        "position": "sticky top",
+        "borderBottom": "1px solid border-subtle",
+        "scrollBehavior": "Transparent over hero image; transitions to bg-primary at 80px scroll"
+      },
+      {
+        "name": "hero",
+        "order": 2,
+        "type": "full-bleed photographic",
+        "theme": "dark-overlay",
+        "bgColor": "Photography with overlay",
+        "width": 1470,
+        "height": 856,
+        "heightMath": "Outside-In from canvas width: 1470 × 58% = 852.6 → rounded to 856px (nearest 8). 58% gives a tall, immersive image — appropriate for luxury hotel first impression.",
+        "imageRatio": {
+          "percent": 58,
+          "width": 1470,
+          "height": 856,
+          "description": "Full-bleed landscape photograph of Thornfield Manor exterior or gardens at dusk",
+          "overlay": "linear gradient from steel-6 at 58% opacity at bottom to transparent at top",
+          "objectFit": "cover"
+        },
+        "contentPosition": "bottom-left, above gradient, within content area margins",
+        "contentPaddingBottom": 80,
+        "content": {
+          "eyebrow": {
+            "text": "Cotswolds, England",
+            "role": "label",
+            "color": "gold-rule",
+            "marginBottom": 16
+          },
+          "headline": {
+            "text": "A Manor for the\nThoughtful Traveller",
+            "role": "hero",
+            "color": "text-on-dark",
+            "maxWidth": 640,
+            "marginBottom": 24
+          },
+          "subheadline": {
+            "text": "Twelve rooms. Private gardens. A kitchen guided by the seasons.",
+            "role": "body",
+            "color": "text-on-dark-secondary",
+            "maxWidth": 480,
+            "marginBottom": 40
+          },
+          "cta": {
+            "text": "Explore the Manor",
+            "role": "label",
+            "height": 48,
+            "paddingH": 32,
+            "radius": 0,
+            "background": "transparent",
+            "border": "1px solid stone-74",
+            "color": "text-on-dark",
+            "hoverBackground": "rgba(stone-97, 0.10)",
+            "tracking": "0.12em",
+            "textTransform": "uppercase"
+          }
+        }
+      },
+      {
+        "name": "rooms-overview",
+        "order": 3,
+        "type": "content-area — three-column grid",
+        "theme": "light",
+        "bgColor": "bg-primary",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "columns": "threeEqual (307 / 307 / 306)",
+        "sectionHeader": {
+          "layout": "centered, full-width",
+          "eyebrow": { "text": "Accommodation", "role": "label", "color": "text-tertiary", "marginBottom": 16 },
+          "heading": { "text": "The Twelve Rooms", "role": "heading", "color": "text-primary", "marginBottom": 24 },
+          "body": { "text": "Each room is individually appointed, drawing on the manor's history and the landscape beyond.", "role": "body", "color": "text-secondary", "maxWidth": 540, "marginBottom": 64 }
+        },
+        "cardGrid": {
+          "columns": 3,
+          "gutterH": 40,
+          "gutterV": 48,
+          "itemsShown": 6,
+          "cardWidth": 307,
+          "cardImage": {
+            "width": 307,
+            "ratio": "68%",
+            "height": 209,
+            "heightMath": "307 × 68% = 208.76 → 208px... round to 208. Off by 1px from grid — use 208 (26×8=208 ✓)",
+            "objectFit": "cover"
+          },
+          "cardContentPadding": 24,
+          "cardRadius": 0,
+          "cardBorder": "none",
+          "cardBackground": "bg-primary"
+        },
+        "viewAllLink": {
+          "text": "View all twelve rooms",
+          "role": "body-small",
+          "color": "accent",
+          "underline": true,
+          "marginTop": 64
+        }
+      },
+      {
+        "name": "room-detail",
+        "order": 4,
+        "type": "content-area — F5+F4 two-column",
+        "theme": "light",
+        "bgColor": "bg-primary",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "note": "This is a page-level template, not a homepage section. Used for individual room pages.",
+        "columns": {
+          "imageColumn": {
+            "width": 593,
+            "position": "left",
+            "layout": "stacked images",
+            "primaryImage": {
+              "width": 593,
+              "ratio": "68%",
+              "height": 403,
+              "heightMath": "593 × 68% = 403.24 → 408px (on 8px grid: 51×8=408 ✓)",
+              "objectFit": "cover"
+            },
+            "secondaryImages": {
+              "count": 2,
+              "eachWidth": 277,
+              "widthMath": "593 − 40 (gutter) = 553 ÷ 2 = 276.5 → 277 + 276 = 553 ✓",
+              "ratio": "68%",
+              "eachHeight": 188,
+              "heightMath": "277 × 68% = 188.36 → 192px (24×8=192). Use 192.",
+              "marginTop": 16
+            }
+          },
+          "detailColumn": {
+            "width": 367,
+            "position": "right",
+            "paddingLeft": 0,
+            "content": {
+              "eyebrow": { "role": "label", "color": "text-tertiary", "example": "GARDEN SUITE", "marginBottom": 16 },
+              "roomName": { "role": "section", "color": "text-primary", "marginBottom": 8 },
+              "price": { "role": "price", "color": "text-secondary", "example": "From £485 per night", "marginBottom": 32 },
+              "divider": { "height": 1, "color": "border", "marginBottom": 32 },
+              "description": { "role": "body", "color": "text-primary", "maxLines": "unconstrained", "marginBottom": 32 },
+              "amenitiesHeading": { "role": "label", "color": "text-tertiary", "text": "ROOM FEATURES", "marginBottom": 16 },
+              "amenitiesList": { "role": "body-small", "color": "text-secondary", "layout": "two-column list", "itemGap": 8, "columnWidth": 147 },
+              "cta": { "text": "Check Availability", "height": 48, "paddingH": 32, "radius": 0, "background": "accent", "color": "pure-white", "role": "label", "tracking": "0.1em", "textTransform": "uppercase", "marginTop": 40, "width": "100%", "maxWidth": 367 }
+            }
+          }
+        }
+      },
+      {
+        "name": "pricing-grid",
+        "order": 5,
+        "type": "content-area — four-column grid",
+        "theme": "light",
+        "bgColor": "bg-secondary",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "sectionHeader": {
+          "eyebrow": { "text": "Rates", "role": "label", "color": "text-tertiary", "marginBottom": 16 },
+          "heading": { "text": "Room Pricing", "role": "heading", "color": "text-primary", "marginBottom": 24 },
+          "body": { "text": "All rates include breakfast for two and use of spa facilities.", "role": "body", "color": "text-secondary", "marginBottom": 64 }
+        },
+        "grid": {
+          "columns": 4,
+          "gutterH": 40,
+          "cardWidth": 220,
+          "cardPadding": 24,
+          "cardRadius": 0,
+          "cardBorder": "1px solid border",
+          "cardBackground": "bg-primary",
+          "math": "1000 − (3 × 40) = 880. 880 ÷ 4 = 220px. 220 × 4 + 120 = 1000 ✓",
+          "cardStructure": {
+            "roomType": { "role": "label", "color": "text-tertiary", "textTransform": "uppercase", "marginBottom": 8 },
+            "roomName": { "role": "subheading", "color": "text-primary", "marginBottom": 16 },
+            "divider": { "height": 1, "color": "border-subtle", "marginBottom": 16 },
+            "nightlyRate": { "role": "price", "color": "text-primary", "example": "£485", "marginBottom": 4 },
+            "rateLabel": { "role": "caption", "color": "text-tertiary", "text": "per night, including breakfast", "marginBottom": 24 },
+            "includes": { "role": "body-small", "color": "text-secondary", "items": ["Breakfast for two", "Spa access", "WiFi", "Parking"], "itemGap": 8 },
+            "cta": { "text": "Check Dates", "height": 40, "paddingH": 16, "radius": 0, "background": "transparent", "border": "1px solid text-primary", "color": "text-primary", "role": "label", "tracking": "0.08em", "textTransform": "uppercase", "marginTop": 24, "width": "100%" }
+          }
+        }
+      },
+      {
+        "name": "restaurant",
+        "order": 6,
+        "type": "content-area — alternating F5+F4 blocks",
+        "theme": "light",
+        "bgColor": "bg-primary",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "sectionHeader": {
+          "eyebrow": { "text": "Dining", "role": "label", "color": "text-tertiary", "marginBottom": 16 },
+          "heading": { "text": "The Thornfield Table", "role": "heading", "color": "text-primary", "marginBottom": 24 },
+          "body": { "text": "A kitchen that follows the Cotswolds season. Guests are seated once each evening, at a time of their choosing.", "role": "body", "color": "text-secondary", "maxWidth": 540, "marginBottom": 96 }
+        },
+        "blocks": [
+          {
+            "layout": "image-left",
+            "image": {
+              "width": 593,
+              "ratio": "74%",
+              "height": 440,
+              "heightMath": "593 × 74% = 438.82 → 440px (55×8=440 ✓)",
+              "objectFit": "cover",
+              "description": "Kitchen interior or hero dish photography"
+            },
+            "text": {
+              "width": 367,
+              "paddingLeft": 40,
+              "eyebrow": { "role": "label", "color": "accent", "text": "THE KITCHEN", "marginBottom": 16 },
+              "heading": { "role": "section", "color": "text-primary", "text": "Rooted in the Region", "marginBottom": 24 },
+              "body": { "role": "body", "color": "text-secondary", "maxCharsPerLine": 45, "marginBottom": 32 },
+              "cta": { "text": "View the Menu", "height": 40, "paddingH": 24, "radius": 0, "background": "transparent", "border": "1px solid accent", "color": "accent", "role": "label", "tracking": "0.1em", "textTransform": "uppercase" }
+            }
+          },
+          {
+            "layout": "image-right",
+            "image": {
+              "width": 593,
+              "ratio": "74%",
+              "height": 440,
+              "objectFit": "cover",
+              "description": "Dining room set for evening service"
+            },
+            "text": {
+              "width": 367,
+              "paddingRight": 40,
+              "eyebrow": { "role": "label", "color": "text-tertiary", "text": "THE ROOM", "marginBottom": 16 },
+              "heading": { "role": "section", "color": "text-primary", "text": "Gathered Around One Table", "marginBottom": 24 },
+              "body": { "role": "body", "color": "text-secondary", "marginBottom": 32 },
+              "marginTop": 64
+            }
+          }
+        ],
+        "menuHighlights": {
+          "layout": "three-column grid below blocks",
+          "marginTop": 96,
+          "columns": 3,
+          "columnWidth": 307,
+          "gutter": 40,
+          "eyebrow": { "role": "label", "color": "text-tertiary", "text": "FROM THE MENU", "textAlign": "center", "marginBottom": 48 },
+          "card": {
+            "padding": 0,
+            "background": "transparent",
+            "border": "none",
+            "structure": {
+              "course": { "role": "label", "color": "text-tertiary", "marginBottom": 8 },
+              "dishName": { "role": "subheading", "color": "text-primary", "marginBottom": 8 },
+              "description": { "role": "body-small", "color": "text-secondary", "marginBottom": 16 },
+              "price": { "role": "price", "color": "text-tertiary" }
+            }
+          }
+        }
+      },
+      {
+        "name": "spa",
+        "order": 7,
+        "type": "content-area — full-width intro + two-column",
+        "theme": "dark",
+        "bgColor": "bg-dark (hsl(189, 12%, 10%))",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "fullWidthIntro": {
+          "textAlign": "center",
+          "eyebrow": { "role": "label", "color": "stone-58", "text": "WELLNESS", "marginBottom": 16 },
+          "heading": { "role": "heading", "color": "text-on-dark", "text": "The Thornfield Spa", "marginBottom": 24 },
+          "body": { "role": "body", "color": "text-on-dark-secondary", "text": "Restored outbuildings housing a thermal suite, treatment rooms, and a 14-metre indoor pool fed from a natural spring.", "maxWidth": 600, "marginAuto": true, "marginBottom": 80 }
+        },
+        "treatmentGrid": {
+          "layout": "two-equal columns",
+          "columns": 2,
+          "columnWidth": 480,
+          "gutter": 40,
+          "cards": {
+            "count": 4,
+            "layout": "2 per column",
+            "image": {
+              "width": 480,
+              "ratio": "58%",
+              "height": 278,
+              "heightMath": "480 × 58% = 278.4 → 280px (35×8=280 ✓). Using 280.",
+              "objectFit": "cover"
+            },
+            "contentPaddingTop": 24,
+            "structure": {
+              "treatmentName": { "role": "subheading", "color": "text-on-dark", "marginBottom": 8 },
+              "duration": { "role": "label", "color": "stone-58", "marginBottom": 8 },
+              "description": { "role": "body-small", "color": "text-on-dark-secondary", "marginBottom": 16 },
+              "price": { "role": "price", "color": "stone-74" }
+            }
+          }
+        },
+        "enquireCta": {
+          "marginTop": 80,
+          "textAlign": "center",
+          "text": "Book a Treatment",
+          "height": 48,
+          "paddingH": 40,
+          "radius": 0,
+          "background": "transparent",
+          "border": "1px solid stone-58",
+          "color": "text-on-dark",
+          "role": "label",
+          "tracking": "0.12em",
+          "textTransform": "uppercase"
+        }
+      },
+      {
+        "name": "location-grounds",
+        "order": 8,
+        "type": "full-bleed panoramic + content-area",
+        "theme": "light",
+        "bgColor": "bg-secondary",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "panoramicImage": {
+          "width": 1470,
+          "ratio": "26%",
+          "height": 382,
+          "heightMath": "1470 × 26% = 382.2 → 384px (48×8=384 ✓). Using 384.",
+          "description": "Aerial or long-lens view of Thornfield Manor estate and grounds",
+          "objectFit": "cover",
+          "marginBottom": 96
+        },
+        "twoColumnLayout": {
+          "columns": "F5 + F4",
+          "leftWidth": 593,
+          "rightWidth": 367,
+          "gutter": 40,
+          "leftContent": {
+            "eyebrow": { "role": "label", "color": "text-tertiary", "text": "LOCATION", "marginBottom": 16 },
+            "heading": { "role": "section", "color": "text-primary", "text": "The Heart of the Cotswolds", "marginBottom": 24 },
+            "body": { "role": "body", "color": "text-secondary", "marginBottom": 32 },
+            "address": { "role": "body-small", "color": "text-tertiary", "style": "italic", "marginBottom": 16 },
+            "directions": { "role": "body-small", "color": "text-secondary" }
+          },
+          "rightContent": {
+            "groundsFeatures": {
+              "layout": "stacked list",
+              "items": [
+                { "label": "Walled Kitchen Garden", "role": "subheading", "color": "text-primary" },
+                { "label": "Croquet Lawn", "role": "subheading", "color": "text-primary" },
+                { "label": "Trout Stream", "role": "subheading", "color": "text-primary" },
+                { "label": "Wild Meadow Walk", "role": "subheading", "color": "text-primary" }
+              ],
+              "divider": "1px solid border-subtle between each item",
+              "itemPaddingV": 16
+            }
+          }
+        }
+      },
+      {
+        "name": "testimonials",
+        "order": 9,
+        "type": "content-area — centered single column with navigation",
+        "theme": "light",
+        "bgColor": "bg-primary",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "layout": "single centered column",
+        "contentMaxWidth": 640,
+        "contentMarginAuto": true,
+        "structure": {
+          "eyebrow": { "role": "label", "color": "text-tertiary", "text": "GUEST WORDS", "textAlign": "center", "marginBottom": 32 },
+          "quoteRule": { "height": 1, "width": 40, "color": "gold-rule", "marginAuto": true, "marginBottom": 32 },
+          "quoteText": {
+            "role": "section",
+            "color": "text-primary",
+            "textAlign": "center",
+            "fontStyle": "italic",
+            "maxWidth": 640,
+            "example": "An utterly remarkable stay — the kind of place that makes you forget the world exists.",
+            "marginBottom": 32
+          },
+          "attribution": {
+            "guestName": { "role": "label", "color": "text-primary", "textAlign": "center", "marginBottom": 4 },
+            "context": { "role": "caption", "color": "text-tertiary", "textAlign": "center", "marginBottom": 48 }
+          },
+          "navigation": {
+            "layout": "row centered",
+            "gap": 16,
+            "prevButton": { "symbol": "←", "height": 40, "width": 40, "radius": "50%", "border": "1px solid border", "color": "text-secondary", "fontSize": 16, "tapTarget": 40 },
+            "nextButton": { "symbol": "→", "height": 40, "width": 40, "radius": "50%", "border": "1px solid border", "color": "text-secondary", "fontSize": 16, "tapTarget": 40 },
+            "dots": { "size": 6, "activeSize": 8, "color": "border", "activeColor": "text-primary", "gap": 8 }
+          }
+        }
+      },
+      {
+        "name": "booking-cta",
+        "order": 10,
+        "type": "full-bleed dark section",
+        "theme": "dark",
+        "bgColor": "bg-dark-deep (hsl(189, 12%, 6%))",
+        "paddingTop": 128,
+        "paddingBottom": 128,
+        "backgroundImage": {
+          "description": "Subtle texture — linen or stone — at low opacity overlay",
+          "opacity": 0.06
+        },
+        "layout": "centered single column",
+        "contentMaxWidth": 600,
+        "structure": {
+          "eyebrow": { "role": "label", "color": "gold-rule", "text": "AVAILABILITY", "textAlign": "center", "marginBottom": 16 },
+          "heading": { "role": "heading", "color": "text-on-dark", "text": "Plan Your Stay", "textAlign": "center", "marginBottom": 24 },
+          "body": { "role": "body", "color": "text-on-dark-secondary", "textAlign": "center", "text": "We welcome enquiries by telephone or email. For immediate availability, please use the booking form.", "marginBottom": 64 },
+          "form": {
+            "layout": "two columns then stacked",
+            "fields": [
+              { "label": "Arrival", "type": "date", "width": 220, "height": 48, "paddingH": 16, "background": "transparent", "border": "1px solid border-on-dark", "color": "text-on-dark", "radius": 0 },
+              { "label": "Departure", "type": "date", "width": 220, "height": 48, "paddingH": 16, "background": "transparent", "border": "1px solid border-on-dark", "color": "text-on-dark", "radius": 0 },
+              { "label": "Room Type", "type": "select", "width": 220, "height": 48, "paddingH": 16, "background": "transparent", "border": "1px solid border-on-dark", "color": "text-on-dark", "radius": 0 },
+              { "label": "Guests", "type": "select", "width": 220, "height": 48, "paddingH": 16, "background": "transparent", "border": "1px solid border-on-dark", "color": "text-on-dark", "radius": 0 }
+            ],
+            "formLayout": "two × two grid, 40px gutter",
+            "formWidth": 480,
+            "labelRole": "label",
+            "labelColor": "stone-58",
+            "labelMarginBottom": 8,
+            "fieldGroupMarginBottom": 32,
+            "submitButton": {
+              "text": "Check Availability",
+              "height": 48,
+              "paddingH": 40,
+              "radius": 0,
+              "background": "accent",
+              "color": "pure-white",
+              "role": "label",
+              "tracking": "0.12em",
+              "textTransform": "uppercase",
+              "width": "100%",
+              "maxWidth": 480,
+              "marginTop": 32
+            }
+          },
+          "phoneLink": {
+            "text": "Or call +44 (0)1451 000 000",
+            "role": "body-small",
+            "color": "stone-58",
+            "textAlign": "center",
+            "marginTop": 32
+          }
+        }
+      },
+      {
+        "name": "footer",
+        "order": 11,
+        "type": "full-canvas dark",
+        "theme": "dark",
+        "bgColor": "bg-dark (hsl(189, 12%, 10%))",
+        "paddingTop": 80,
+        "paddingBottom": 80,
+        "borderTop": "1px solid border-on-dark",
+        "columns": "four equal (220px each, 40px gutters)",
+        "columnContent": [
+          {
+            "col": 1,
+            "type": "brand",
+            "content": {
+              "logo": { "text": "THORNFIELD MANOR", "role": "label", "tracking": "0.2em", "color": "text-on-dark", "marginBottom": 16 },
+              "tagline": { "role": "body-small", "color": "stone-58", "text": "A country house hotel in the heart of the Cotswolds.", "marginBottom": 32 },
+              "address": { "role": "caption", "color": "stone-42", "style": "normal" }
+            }
+          },
+          {
+            "col": 2,
+            "type": "navigation",
+            "heading": { "text": "The Manor", "role": "label", "color": "stone-58", "tracking": "0.1em", "textTransform": "uppercase", "marginBottom": 24 },
+            "links": ["Rooms", "Dining", "Spa", "Grounds", "Events", "Gift Vouchers"],
+            "linkRole": "body-small",
+            "linkColor": "stone-58",
+            "linkHoverColor": "text-on-dark",
+            "itemGap": 12
+          },
+          {
+            "col": 3,
+            "type": "navigation",
+            "heading": { "text": "Information", "role": "label", "color": "stone-58", "tracking": "0.1em", "textTransform": "uppercase", "marginBottom": 24 },
+            "links": ["Getting Here", "FAQs", "Press", "Careers", "Accessibility", "Privacy Policy"],
+            "linkRole": "body-small",
+            "linkColor": "stone-58",
+            "linkHoverColor": "text-on-dark",
+            "itemGap": 12
+          },
+          {
+            "col": 4,
+            "type": "contact",
+            "heading": { "text": "Contact", "role": "label", "color": "stone-58", "tracking": "0.1em", "textTransform": "uppercase", "marginBottom": 24 },
+            "phone": { "role": "body-small", "color": "stone-58" },
+            "email": { "role": "body-small", "color": "stone-58" },
+            "socialLinks": {
+              "marginTop": 24,
+              "items": ["Instagram", "Facebook"],
+              "role": "body-small",
+              "color": "stone-58",
+              "gap": 16
+            }
+          }
+        ],
+        "legalBar": {
+          "borderTop": "1px solid border-on-dark",
+          "marginTop": 64,
+          "paddingTop": 24,
+          "layout": "flex space-between",
+          "copyright": { "role": "caption", "color": "stone-42", "text": "© 2026 Thornfield Manor. All rights reserved." },
+          "links": { "items": ["Terms of Use", "Privacy Policy", "Cookie Settings"], "role": "caption", "color": "stone-42", "gap": 24 }
+        }
+      }
+    ]
+  },
+
+  "components": {
+    "nav-bar": {
+      "height": 72,
+      "paddingH": 0,
+      "background": "bg-primary",
+      "backgroundTransparent": "transparent (on hero)",
+      "borderBottom": "1px solid border-subtle",
+      "fontSize": "body-small (13px)",
+      "lineHeight": 24,
+      "itemPaddingH": 16,
+      "itemPaddingV": 24,
+      "transition": "background 200ms ease",
+      "states": ["default", "scrolled (solid bg)", "transparent (over hero)"]
+    },
+    "button-primary": {
+      "height": 48,
+      "fontSize": "label (11px / 16px)",
+      "lineHeight": 16,
+      "paddingH": 32,
+      "paddingV": 16,
+      "heightMath": "16 (lineHeight) + 16 + 16 = 48 ✓",
+      "radius": 0,
+      "background": "accent (sage)",
+      "color": "pure-white",
+      "tracking": "0.12em",
+      "textTransform": "uppercase",
+      "states": {
+        "default": { "background": "accent", "color": "pure-white" },
+        "hover": { "background": "accent-hover", "color": "pure-white" },
+        "focus-visible": { "outline": "2px solid accent", "outlineOffset": "2px" },
+        "active": { "background": "accent-dark", "color": "pure-white" },
+        "disabled": { "opacity": 0.42, "cursor": "not-allowed" }
+      }
+    },
+    "button-secondary": {
+      "height": 48,
+      "fontSize": "label (11px / 16px)",
+      "lineHeight": 16,
+      "paddingH": 32,
+      "paddingV": 16,
+      "radius": 0,
+      "background": "transparent",
+      "border": "1px solid text-primary",
+      "color": "text-primary",
+      "tracking": "0.12em",
+      "textTransform": "uppercase",
+      "states": {
+        "default": { "background": "transparent", "border": "1px solid text-primary" },
+        "hover": { "background": "stone-94" },
+        "focus-visible": { "outline": "2px solid text-primary", "outlineOffset": "2px" },
+        "active": { "background": "stone-90" },
+        "disabled": { "opacity": 0.42, "cursor": "not-allowed" }
+      }
+    },
+    "button-ghost-dark": {
+      "height": 48,
+      "fontSize": "label (11px / 16px)",
+      "lineHeight": 16,
+      "paddingH": 32,
+      "paddingV": 16,
+      "radius": 0,
+      "background": "transparent",
+      "border": "1px solid stone-58",
+      "color": "text-on-dark",
+      "tracking": "0.12em",
+      "textTransform": "uppercase",
+      "usage": "CTA buttons on dark sections (hero, spa, booking)",
+      "states": {
+        "default": { "border": "1px solid stone-58" },
+        "hover": { "border": "1px solid stone-84", "background": "rgba(255,255,255,0.06)" },
+        "focus-visible": { "outline": "2px solid stone-84", "outlineOffset": "2px" },
+        "disabled": { "opacity": 0.42 }
+      }
+    },
+    "nav-book-button": {
+      "height": 40,
+      "fontSize": "label (11px / 16px)",
+      "lineHeight": 16,
+      "paddingH": 24,
+      "paddingV": 12,
+      "heightMath": "16 + 12 + 12 = 40 ✓",
+      "radius": 0,
+      "background": "text-primary",
+      "color": "bg-primary",
+      "tracking": "0.1em",
+      "textTransform": "uppercase"
+    },
+    "room-card": {
+      "width": 307,
+      "radius": 0,
+      "border": "none",
+      "background": "bg-primary",
+      "image": {
+        "width": 307,
+        "height": 208,
+        "ratio": "68%",
+        "objectFit": "cover",
+        "marginBottom": 24
+      },
+      "contentPadding": 0,
+      "structure": {
+        "category": { "role": "label", "color": "text-tertiary", "marginBottom": 8 },
+        "roomName": { "role": "subheading", "color": "text-primary", "marginBottom": 8 },
+        "excerpt": { "role": "body-small", "color": "text-secondary", "maxLines": 2, "marginBottom": 16 },
+        "priceRow": {
+          "layout": "flex space-between align-baseline",
+          "price": { "role": "price", "color": "text-primary" },
+          "link": { "text": "View Room →", "role": "body-small", "color": "accent", "tapTarget": 32 }
+        }
+      },
+      "states": {
+        "hover": { "imageTransform": "scale(1.02)", "imageTransition": "200ms ease", "linkColor": "accent-dark" }
+      }
+    },
+    "pricing-card": {
+      "width": 220,
+      "padding": 24,
+      "radius": 0,
+      "border": "1px solid border",
+      "background": "bg-primary",
+      "states": {
+        "default": { "border": "1px solid border" },
+        "featured": { "border": "1px solid accent", "background": "bg-primary" }
+      }
+    },
+    "menu-card": {
+      "width": 307,
+      "padding": 0,
+      "background": "transparent",
+      "topRule": { "height": 1, "color": "border", "marginBottom": 24 }
+    },
+    "spa-card": {
+      "width": 480,
+      "image": {
+        "width": 480,
+        "height": 280,
+        "ratio": "58%"
+      },
+      "contentPaddingTop": 24
+    },
+    "testimonial": {
+      "maxWidth": 640,
+      "marginAuto": true,
+      "quoteRule": { "width": 40, "height": 1, "color": "gold-rule" },
+      "prevButton": { "visible": 16, "tapTarget": 40, "height": 40, "width": 40 },
+      "nextButton": { "visible": 16, "tapTarget": 40, "height": 40, "width": 40 }
+    },
+    "form-field": {
+      "height": 48,
+      "fontSize": "body-small (13px / 24px)",
+      "lineHeight": 24,
+      "paddingH": 16,
+      "paddingV": 12,
+      "heightMath": "24 + 12 + 12 = 48 ✓",
+      "radius": 0,
+      "background": "bg-primary",
+      "border": "1px solid border",
+      "color": "text-primary",
+      "states": {
+        "default": { "border": "1px solid border" },
+        "hover": { "border": "1px solid stone-74" },
+        "focus": { "border": "1px solid accent", "outline": "none" },
+        "error": { "border": "1px solid error" },
+        "disabled": { "opacity": 0.42, "background": "bg-tertiary" }
+      }
+    },
+    "form-field-dark": {
+      "height": 48,
+      "fontSize": "body-small (13px / 24px)",
+      "paddingH": 16,
+      "paddingV": 12,
+      "radius": 0,
+      "background": "transparent",
+      "border": "1px solid border-on-dark",
+      "color": "text-on-dark",
+      "states": {
+        "focus": { "border": "1px solid stone-74", "outline": "none" }
+      }
+    },
+    "divider-rule": {
+      "height": 1,
+      "color": "border",
+      "usage": "Between content sections within a column. Not between page sections."
+    },
+    "gold-accent-rule": {
+      "height": 1,
+      "width": 40,
+      "color": "gold-rule",
+      "usage": "Decorative short rule under eyebrow labels in testimonials and hero. Never full-width."
+    },
+    "amenity-pill": {
+      "height": 32,
+      "paddingH": 16,
+      "paddingV": 8,
+      "heightMath": "16 (lineHeight of label) + 8 + 8 = 32 ✓",
+      "radius": 0,
+      "background": "bg-tertiary",
+      "color": "text-secondary",
+      "fontSize": "label (11px / 16px)",
+      "textTransform": "uppercase",
+      "tracking": "0.08em",
+      "border": "none"
+    }
+  },
+
+  "media": {
+    "ratios": {
+      "hero-full-bleed": { "percent": 58, "description": "Tall immersive landscape — hero section. Signals presence and grandeur.", "example": "1470 × 58% = 856px" },
+      "panoramic-estate": { "percent": 26, "description": "Wide cinematic strip for grounds/location. Estate photography.", "example": "1470 × 26% = 384px" },
+      "portrait-room": { "percent": 68, "description": "Portrait-tendency landscape for room photography. Shows bed, window, furnishings.", "example": "307 × 68% = 208px" },
+      "restaurant-feature": { "percent": 74, "description": "Tall landscape for restaurant/spa feature blocks. More immersive than 68%.", "example": "593 × 74% = 440px" },
+      "spa-card": { "percent": 58, "description": "Balanced landscape for spa treatment cards.", "example": "480 × 58% = 280px" }
+    },
+    "images": [
+      { "section": "hero", "width": 1470, "ratio": "58%", "height": 856, "description": "Thornfield Manor exterior — dusk light, warm stone facade, gardens in foreground" },
+      { "section": "rooms-overview", "count": 6, "width": 307, "ratio": "68%", "height": 208, "description": "Individual room photography — each card shows a unique room" },
+      { "section": "room-detail-primary", "width": 593, "ratio": "68%", "height": 408, "description": "Full room shot — bed, windows, key furnishings" },
+      { "section": "room-detail-secondary", "count": 2, "width": 277, "ratio": "68%", "height": 192, "description": "Detail shots — bathroom, window seat, fireplace" },
+      { "section": "restaurant-kitchen", "width": 593, "ratio": "74%", "height": 440, "description": "Kitchen interior or seasonal dish plate" },
+      { "section": "restaurant-room", "width": 593, "ratio": "74%", "height": 440, "description": "Dining room laid for evening service" },
+      { "section": "spa-cards", "count": 4, "width": 480, "ratio": "58%", "height": 280, "description": "Spa treatment rooms, pool, thermal suite" },
+      { "section": "location-panoramic", "width": 1470, "ratio": "26%", "height": 384, "description": "Aerial or telephoto estate view — manor in landscape context" }
+    ]
+  },
+
+  "darkLightMap": [
+    { "section": "nav", "theme": "light", "bgColor": "hsl(38, 18%, 97%)", "note": "Transitions to transparent over hero on scroll" },
+    { "section": "hero", "theme": "dark-overlay", "bgColor": "photography + gradient overlay hsl(189,12%,6%) at 58% opacity bottom" },
+    { "section": "rooms-overview", "theme": "light", "bgColor": "hsl(38, 18%, 97%)" },
+    { "section": "pricing-grid", "theme": "light", "bgColor": "hsl(38, 18%, 94%)" },
+    { "section": "restaurant", "theme": "light", "bgColor": "hsl(38, 18%, 97%)" },
+    { "section": "spa", "theme": "dark", "bgColor": "hsl(189, 12%, 10%)" },
+    { "section": "location-grounds", "theme": "light", "bgColor": "hsl(38, 18%, 94%)" },
+    { "section": "testimonials", "theme": "light", "bgColor": "hsl(38, 18%, 97%)" },
+    { "section": "booking-cta", "theme": "dark", "bgColor": "hsl(189, 12%, 6%)" },
+    { "section": "footer", "theme": "dark", "bgColor": "hsl(189, 12%, 10%)" }
+  ],
+
+  "interactiveInventory": [
+    {
+      "element": "Nav — Rooms, Dining, Spa, Grounds, About, Enquire links",
+      "type": "text-link",
+      "fontSize": 13,
+      "tapTarget": 72,
+      "meetsMinimum": true,
+      "note": "Full nav height (72px) is the tap target. fontSize 13 ≥ 13px minimum ✓"
+    },
+    {
+      "element": "Nav — Book a Stay button",
+      "type": "button",
+      "fontSize": 11,
+      "visibleHeight": 40,
+      "tapTarget": 40,
+      "meetsMinimum": true,
+      "note": "Height 40px ≥ 32px minimum ✓. Label at 11px uppercase with tracking is legible."
+    },
+    {
+      "element": "Hero — Explore the Manor CTA",
+      "type": "button",
+      "fontSize": 11,
+      "visibleHeight": 48,
+      "tapTarget": 48,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Room card — View Room → link",
+      "type": "text-link",
+      "fontSize": 13,
+      "tapTarget": 32,
+      "meetsMinimum": true,
+      "note": "Tap target padded to 32px minimum using padding-block"
+    },
+    {
+      "element": "Rooms overview — View all twelve rooms",
+      "type": "text-link",
+      "fontSize": 13,
+      "tapTarget": 32,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Pricing card — Check Dates button",
+      "type": "button",
+      "fontSize": 11,
+      "visibleHeight": 40,
+      "tapTarget": 40,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Restaurant — View the Menu button",
+      "type": "button",
+      "fontSize": 11,
+      "visibleHeight": 40,
+      "tapTarget": 40,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Spa — Book a Treatment button",
+      "type": "button",
+      "fontSize": 11,
+      "visibleHeight": 48,
+      "tapTarget": 48,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Testimonial — Previous (←) arrow",
+      "type": "icon-button",
+      "visibleSize": 16,
+      "tapTarget": 40,
+      "meetsMinimum": true,
+      "note": "40×40 circular button. Arrow glyph at 16px ≥ 13px minimum ✓"
+    },
+    {
+      "element": "Testimonial — Next (→) arrow",
+      "type": "icon-button",
+      "visibleSize": 16,
+      "tapTarget": 40,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Booking form — date inputs (Arrival, Departure)",
+      "type": "input",
+      "fontSize": 13,
+      "visibleHeight": 48,
+      "tapTarget": 48,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Booking form — select (Room Type, Guests)",
+      "type": "select",
+      "fontSize": 13,
+      "visibleHeight": 48,
+      "tapTarget": 48,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Booking form — Check Availability submit",
+      "type": "button",
+      "fontSize": 11,
+      "visibleHeight": 48,
+      "tapTarget": 48,
+      "meetsMinimum": true
+    },
+    {
+      "element": "Footer — navigation links (all columns)",
+      "type": "text-link",
+      "fontSize": 13,
+      "tapTarget": 40,
+      "meetsMinimum": true,
+      "note": "Footer links have 12px padding-block each, producing 12+24+12=48... recalculate: line-height 24px + 8px padding top + 8px bottom = 40px tap target ✓"
+    },
+    {
+      "element": "Footer — social links (Instagram, Facebook)",
+      "type": "text-link",
+      "fontSize": 13,
+      "tapTarget": 40,
+      "meetsMinimum": true
+    }
+  ],
+
+  "contentVerification": [
+    {
+      "element": "Hero headline — two lines",
+      "maxContent": "A Manor for the Thoughtful Traveller",
+      "charCount": 36,
+      "fontSize": 55,
+      "estimatedWidth": "Line 1: 'A Manor for the' = 15 chars × ~32px = 480px. Line 2: 'Thoughtful Traveller' = 20 chars × ~32px = 640px.",
+      "containerWidth": 1000,
+      "maxWidth": 640,
+      "fits": true,
+      "wraps": true,
+      "maxLines": 2,
+      "note": "Set to max-width 640px with line breaks managed by content. Both lines comfortably within 640px at 55px. ✓"
+    },
+    {
+      "element": "Nav — longest link text",
+      "maxContent": "Restaurant & Bar",
+      "charCount": 16,
+      "fontSize": 13,
+      "estimatedWidth": "16 × 8px avg = 128px + 32px padding = 160px",
+      "containerWidth": "flexible — nav is flex row",
+      "fits": true,
+      "note": "6 nav items. Widest ~160px. Logo ~200px. CTA button ~160px. Total ~1320px. Content area 1000px — TOO WIDE. Fix: Use 'Dining' instead of 'Restaurant & Bar' (6 chars). Revised items: Rooms, Dining, Spa, Grounds, About, Enquire. Widest = 'Grounds' = 7 chars × 8px + 32px padding = 88px. 6 items × ~88px = 528px + logo 200px + CTA 160px + gaps = ~960px. Fits within 1000px ✓"
+    },
+    {
+      "element": "Room card name — worst case",
+      "maxContent": "The Thornfield Suite",
+      "charCount": 20,
+      "fontSize": 18,
+      "estimatedWidth": "20 × 11px avg = 220px",
+      "containerWidth": 307,
+      "fits": true,
+      "note": "220px well within 307px card width (no horizontal padding on content at card level). ✓"
+    },
+    {
+      "element": "Room price in card",
+      "maxContent": "From £485 per night",
+      "charCount": 19,
+      "fontSize": 21,
+      "estimatedWidth": "19 × 13px avg = 247px",
+      "containerWidth": 307,
+      "fits": true,
+      "note": "247px within 307px. Note: price and 'View Room →' share a row (flex space-between). Price ~247px + gap + link ~90px = 337px. OVERFLOW on 307px card. Fix: stack price above link, do not share a row. Adjusted: price on its own line, 'View Room →' on next line. 247px within 307px ✓"
+    },
+    {
+      "element": "Pricing card — room name",
+      "maxContent": "The Thornfield Suite",
+      "charCount": 20,
+      "fontSize": 18,
+      "estimatedWidth": "20 × 11px avg = 220px",
+      "containerWidth": 220,
+      "contentWidth": "220 − (24 × 2 padding) = 172px",
+      "fits": false,
+      "wraps": true,
+      "maxLines": 2,
+      "note": "'The Thornfield Suite' at 18px is ~220px wide in a 172px usable area. Wraps to 2 lines. Acceptable for a card name — 2-line heading is readable. Confirmed acceptable. ✓"
+    },
+    {
+      "element": "Pricing card — nightly rate",
+      "maxContent": "£485",
+      "charCount": 4,
+      "fontSize": 21,
+      "estimatedWidth": "4 × 13px avg = 52px",
+      "containerWidth": 172,
+      "fits": true,
+      "note": "Currency value is short. Even a max of '£1,250' = 6 chars × 13px = 78px. Well within 172px ✓"
+    },
+    {
+      "element": "Room detail — right column body text",
+      "maxContent": "Long description paragraph",
+      "fontSize": 16,
+      "containerWidth": 367,
+      "charsPerLine": "367 ÷ 9px avg = ~41 chars/line",
+      "fits": true,
+      "note": "41 chars per line at 16px is excellent readability (optimal 45-75 for body text — slightly tight but acceptable for a narrower column). ✓"
+    },
+    {
+      "element": "Testimonial quote",
+      "maxContent": "An utterly remarkable stay — the kind of place that makes you forget the world exists.",
+      "charCount": 89,
+      "fontSize": 21,
+      "estimatedWidth": "89 × 13px avg = 1157px",
+      "containerWidth": 640,
+      "charsPerLine": "640 ÷ 13px = ~49 chars/line",
+      "fits": true,
+      "wraps": true,
+      "maxLines": 3,
+      "note": "89 chars ÷ 49 per line = ~2 lines. Fine at 21px italic in a 640px centred column. ✓"
+    },
+    {
+      "element": "Footer nav links",
+      "maxContent": "Privacy Policy",
+      "charCount": 14,
+      "fontSize": 13,
+      "estimatedWidth": "14 × 8px = 112px",
+      "containerWidth": 220,
+      "fits": true
+    },
+    {
+      "element": "Booking form field — label text",
+      "maxContent": "Departure Date",
+      "charCount": 14,
+      "fontSize": 11,
+      "estimatedWidth": "14 × 6px = 84px",
+      "containerWidth": 220,
+      "fits": true
+    }
+  ],
+
+  "gestaltVerification": [
+    {
+      "level": "card-padding vs card-gutter",
+      "internal": "card padding 32px (or 24px for pricing cards)",
+      "external": "gutter between cards 40px",
+      "passes": true,
+      "note": "32px internal < 40px gutter ✓. 24px pricing card padding < 40px gutter ✓. Chosen gutter 40px specifically to satisfy this rule."
+    },
+    {
+      "level": "item-to-item vs group-to-group",
+      "internal": "item-to-item gap 32px",
+      "external": "group-to-group gap 64px",
+      "passes": true,
+      "note": "32 < 64 ✓"
+    },
+    {
+      "level": "group-to-group vs section-to-section",
+      "internal": "group-to-group 64px",
+      "external": "section-to-section 128px",
+      "passes": true,
+      "note": "64 < 128 ✓"
+    },
+    {
+      "level": "label-to-field vs field-to-field",
+      "internal": "label margin-bottom 8px",
+      "external": "field group gap 32px",
+      "passes": true,
+      "note": "8 < 32 ✓"
+    },
+    {
+      "level": "card-internal (text rows) vs card-padding",
+      "internal": "text rows within card: marginBottom 8px (label), 8px (name), 16px (excerpt)",
+      "external": "card padding 24–32px",
+      "passes": true,
+      "note": "Largest internal gap 16px < card padding 24px ✓"
+    },
+    {
+      "level": "section-header to grid vs section padding",
+      "internal": "section header marginBottom 64px (heading to grid)",
+      "external": "section paddingTop 128px",
+      "passes": true,
+      "note": "64 < 128 ✓"
+    },
+    {
+      "level": "testimonial — quote to attribution vs attribution to navigation",
+      "internal": "marginBottom after attribution 48px",
+      "external": "section padding 128px above/below",
+      "passes": true,
+      "note": "48 < 128 ✓"
+    },
+    {
+      "level": "room detail — amenity list item gap vs amenities block to CTA",
+      "internal": "amenity item gap 8px",
+      "external": "body-to-cta 40px",
+      "passes": true,
+      "note": "8 < 40 ✓"
+    },
+    {
+      "level": "nav item padding vs logo-to-links gap",
+      "internal": "nav item paddingH 16px",
+      "external": "nav splits into two zones across 1000px — no explicit gap needed; space-between achieves separation",
+      "passes": true,
+      "note": "Space-between layout; visual separation from distance, not gap value. Acceptable for nav."
+    },
+    {
+      "level": "footer column internal gap vs footer paddingTop",
+      "internal": "footer link itemGap 12px",
+      "external": "footer paddingTop 80px",
+      "passes": true,
+      "note": "12 < 80 ✓"
+    }
+  ]
+}

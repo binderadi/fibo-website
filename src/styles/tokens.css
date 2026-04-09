@@ -1,0 +1,154 @@
+/*
+ * FIBO DESIGN TOKENS — MacBook Air M4 (1470×956)
+ *
+ * Every value below is derived from FIBO rules.
+ * Calculation shown inline for auditability.
+ */
+
+:root {
+  /* ─────────────────────────────────────────
+   * CANVAS + MARGINS
+   * ───────────────────────────────────────── */
+
+  /* Canvas: 1470×956 (MacBook Air M4 default) */
+  --canvas-w: 1470px;
+  --canvas-h: 956px;
+
+  /* Margin: 6% of canvas width → 1470 × 0.06 = 88.2 → 88px */
+  --margin: 88px;
+
+  /* Content area: 1470 − (2 × 88) = 1294px */
+  --content-w: 1294px;
+
+  /* ─────────────────────────────────────────
+   * FIBO SECTIONS OF CONTENT AREA (1294px)
+   * F1=6%, F2=10%, F3=16%, F4=26%, F5=42%
+   * Total: 78+129+207+336+543 = 1293px (1px rounding loss across 5 values)
+   * ───────────────────────────────────────── */
+
+  --f1: 78px;   /* 1294 × 0.06 = 77.64 → 78  */
+  --f2: 129px;  /* 1294 × 0.10 = 129.4 → 129 */
+  --f3: 207px;  /* 1294 × 0.16 = 207.04 → 207 */
+  --f4: 336px;  /* 1294 × 0.26 = 336.44 → 336 */
+  --f5: 543px;  /* 1294 × 0.42 = 543.48 → 543 */
+
+  /* Combined sections */
+  --f1f2:    207px;  /* 78 + 129                */
+  --f1f2f3:  414px;  /* 78 + 129 + 207          */
+  --f4f5:    879px;  /* 336 + 543               */
+  --f3f4:    543px;  /* 207 + 336 (= F5, by coincidence of rounding) */
+  --f2f3:    336px;  /* 129 + 207 (= F4, by coincidence of rounding) */
+
+  /* ─────────────────────────────────────────
+   * BASELINE GRID
+   * F1 of base ruler (F1=8) → 8px
+   * ───────────────────────────────────────── */
+  --baseline: 8px;
+
+  /* ─────────────────────────────────────────
+   * GUTTER
+   * Fixed multiple of baseline: 3 × 8 = 24px
+   * ───────────────────────────────────────── */
+  --gutter: 24px;
+
+  /* ─────────────────────────────────────────
+   * COLUMN WIDTHS (gutter mechanic applied)
+   *
+   * Rule: subtract total gutter space from parent BEFORE
+   * dividing with FIBO ruler. Not after.
+   *
+   * TWO-COLUMN LAYOUT (1 gutter × 24px):
+   *   Post-gutter width: 1294 − 24 = 1270px
+   *   F4 of 1270px: 1270 × 26% = 330.2 → 330px  (label sidebar)
+   *   Remainder:    1270 − 330  = 940px           (main content)
+   *
+   * THREE-COLUMN EQUAL GRID (2 gutters × 24px = 48px):
+   *   Post-gutter width: 1294 − 48 = 1246px
+   *   Each card: 1246 ÷ 3 = 415.3 → 415px
+   *   (Equal-width repeating: arithmetic division, per FIBO spec)
+   * ───────────────────────────────────────── */
+  --col-sidebar: 330px;  /* F4 of post-gutter (1270px) */
+  --col-main:    940px;  /* remainder after sidebar + gutter */
+  --col-3-card:  415px;  /* (1294 − 48) ÷ 3, equal-width repeating */
+
+  /* ─────────────────────────────────────────
+   * TYPE SCALE
+   * Base ruler: F1=8 → 8, 13, 21, 34, 55
+   * Gap-fill applied → 10 sizes selected
+   * Chose 11 over 12 for this design
+   * ───────────────────────────────────────── */
+  --t8:  8px;
+  --t9:  9px;
+  --t10: 10px;
+  --t11: 11px;
+  --t13: 13px;
+  --t16: 16px;
+  --t18: 18px;
+  --t21: 21px;
+  --t34: 34px;
+  --t55: 55px;
+
+  /* ─────────────────────────────────────────
+   * LINE HEIGHTS (nearest comfortable multiple of 8)
+   * Larger text → tighter ratio
+   * Smaller text → looser ratio
+   * ───────────────────────────────────────── */
+  --lh8:  16px;  /* 8px text   → 16px lh  (ratio 2.00) */
+  --lh9:  16px;  /* 9px text   → 16px lh  (ratio 1.78) */
+  --lh10: 16px;  /* 10px text  → 16px lh  (ratio 1.60) */
+  --lh11: 16px;  /* 11px text  → 16px lh  (ratio 1.45) */
+  --lh13: 24px;  /* 13px text  → 24px lh  (ratio 1.85) */
+  --lh16: 24px;  /* 16px text  → 24px lh  (ratio 1.50) */
+  --lh18: 32px;  /* 18px text  → 32px lh  (ratio 1.78) */
+  --lh21: 32px;  /* 21px text  → 32px lh  (ratio 1.52) */
+  --lh34: 40px;  /* 34px text  → 40px lh  (ratio 1.18) */
+  --lh55: 64px;  /* 55px text  → 64px lh  (ratio 1.16) */
+
+  /* ─────────────────────────────────────────
+   * SPACING SCALE (multiples of baseline 8px)
+   * ───────────────────────────────────────── */
+  --sp4:   4px;   /* ½ baseline — only for border widths, never spacing */
+  --sp8:   8px;   /* 1× — tight internal spacing                        */
+  --sp16:  16px;  /* 2× — standard internal padding, label-to-value     */
+  --sp24:  24px;  /* 3× — gutter, item-to-item spacing                  */
+  --sp32:  32px;  /* 4× — card padding, component internal              */
+  --sp40:  40px;  /* 5× — small section gap                             */
+  --sp48:  48px;  /* 6× — medium section gap, sub-section               */
+  --sp64:  64px;  /* 8× — large gap                                     */
+  --sp80:  80px;  /* 10× — XL gap                                       */
+  --sp96:  96px;  /* 12× — major section gap                            */
+  --sp128: 128px; /* 16× — hero internal spacing                        */
+
+  /* ─────────────────────────────────────────
+   * NAV (Inside-Out from content)
+   * Signal 5: nav height = consistent property → Inside-Out
+   * Text: 13px, lh: 16px, v-padding: 16px top + 16px bottom
+   * Height: 16 + 16 + 16 = 48px ✓ (multiple of 8)
+   * ───────────────────────────────────────── */
+  --nav-h: 48px;
+
+  /* ─────────────────────────────────────────
+   * COLORS
+   * FIBO does not define color (per spec §13).
+   * Design intent: monochrome + single accent.
+   * ───────────────────────────────────────── */
+  --c-bg:         #FFFFFF;
+  --c-surface:    #F5F5F5;
+  --c-surface-2:  #EBEBEB;
+  --c-border:     #DCDCDC;
+  --c-border-2:   #C8C8C8;
+  --c-text:       #111111;
+  --c-muted:      #888888;
+  --c-faint:      #BBBBBB;
+  --c-accent:     #1400FF;
+  --c-accent-2:   #0D00B3;
+  --c-accent-bg:  #EEEEFF;
+  --c-accent-mid: #8080FF;
+
+  /* FIBO section palette (for visualizations) */
+  --c-f1: #DDE4FF;
+  --c-f2: #B3C0FF;
+  --c-f3: #7A8FFF;
+  --c-f4: #3D57FF;
+  --c-f5: #1400FF;
+}
