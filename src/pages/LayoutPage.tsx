@@ -116,9 +116,9 @@ export default function LayoutPage() {
                         color: s.tc,
                       }}
                     >
-                      <span className="mono" style={styles.rulerName}>{s.name}</span>
-                      <span className="mono" style={styles.rulerPct}>{s.pct}</span>
-                      <span className="mono" style={styles.rulerPx}>{s.px}px</span>
+                      <span className="ruler-text mono" style={styles.rulerName}>{s.name}</span>
+                      <span className="ruler-text mono" style={styles.rulerPct}>{s.pct}</span>
+                      <span className="ruler-text mono" style={styles.rulerPx}>{s.px}px</span>
                     </div>
                   ))}
                 </div>

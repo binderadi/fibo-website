@@ -120,9 +120,9 @@ export default function Home() {
               { label: 'F4 · 26%', w: 336, bg: 'var(--c-f4)', c: 'var(--c-bg)'     },
               { label: 'F5 · 42%', w: 543, bg: 'var(--c-f5)', c: 'var(--c-bg)'     },
             ].map((s) => (
-              <div key={s.label} style={{ ...styles.rulerSection, width: `${(s.w / 1293) * 100}%`, background: s.bg, color: s.c }}>
-                <span style={styles.rulerLabel}>{s.label}</span>
-                <span className="mono" style={{ ...styles.rulerPx, color: s.c }}>{s.w}px</span>
+              <div key={s.label} style={{ ...styles.rulerSection, width: `${(s.w / 1293) * 100}%`, background: s.bg, color: s.c, overflow: 'hidden' }}>
+                <span className="ruler-text" style={styles.rulerLabel}>{s.label}</span>
+                <span className="ruler-text mono" style={{ ...styles.rulerPx, color: s.c }}>{s.w}px</span>
               </div>
             ))}
           </div>

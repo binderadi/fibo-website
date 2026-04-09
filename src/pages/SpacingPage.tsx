@@ -74,7 +74,7 @@ export default function SpacingPage() {
                       <div
                         style={{
                           height: '8px',    /* Thin bar, same height as baseline */
-                          width: Math.min(val * 2, 600), /* Scale for visibility */
+                          width: `${(val / 128) * 100}%`, /* Proportional: 128px = 100% */
                           background: val <= 24
                             ? 'var(--c-f3)'
                             : val <= 48
@@ -443,7 +443,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   proximityAnnotation: {
     display: 'flex',
-    gap: 'var(--sp24)',
+    flexWrap: 'wrap',
+    gap: 'var(--sp16)',
     padding: 'var(--sp16)',
     background: 'var(--c-surface)',
     borderLeft: '3px solid var(--c-accent)',
