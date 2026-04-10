@@ -12,8 +12,10 @@ import TrackerPage from './pages/test/TrackerPage'
 import ObservatoryPage from './pages/test/ObservatoryPage'
 import RoamPage from './pages/test/RoamPage'
 import HollowWirePage from './pages/test/HollowWirePage'
+import TradingPage from './pages/test/TradingPage'
 import BacklogPage from './pages/BacklogPage'
 import SkillPage from './pages/SkillPage'
+import TrainingPage from './pages/TrainingPage'
 
 /* AppShell hides the FIBO nav on /test/* routes.
  * Test pages get the full viewport — they render their own headers.
@@ -39,8 +41,10 @@ function AppShell() {
           <Route path="/test/observatory" element={<ObservatoryPage />} />
           <Route path="/test/roam" element={<RoamPage />} />
           <Route path="/test/hollow-wire" element={<HollowWirePage />} />
+          <Route path="/test/trading" element={<TradingPage />} />
           <Route path="/backlog" element={<BacklogPage />} />
           <Route path="/skill" element={<SkillPage />} />
+          <Route path="/training" element={<TrainingPage />} />
         </Routes>
       </main>
     </>

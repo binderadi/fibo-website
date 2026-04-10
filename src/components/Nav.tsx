@@ -29,6 +29,7 @@ const systemLinks = [
   { to: '/signals',    label: 'Signals'    },
   { to: '/backlog',    label: 'Backlog'    },
   { to: '/skill',      label: 'FIBO Skill' },
+  { to: '/training',   label: 'Training'   },
 ]
 
 const testLinks = [
@@ -38,6 +39,7 @@ const testLinks = [
   { to: '/test/observatory',  label: 'Observatory'       },
   { to: '/test/roam',         label: 'Roam'              },
   { to: '/test/hollow-wire',  label: 'The Hollow Wire'   },
+  { to: '/test/trading',      label: 'Trading Terminal'  },
 ]
 
 export default function Nav() {
